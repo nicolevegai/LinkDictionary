@@ -7,7 +7,7 @@ This Repository is a project for our Software Development couse. We are creating
 ![Dictionary](https://cdn-02.independent.ie/world-news/and-finally/article36675155.ece/c261e/AUTOCROP/w620/ipanews_a5b36655-afb2-4d5a-b4e2-fedfbd38de89_1)  
     
 
-### Intructions
+### Instructions
 You will work in pairs to create a JAVA project to manage a dictionary built using Linked lists. 
 
   **1.**  First create a project on Github (follow the usual instructions).   
