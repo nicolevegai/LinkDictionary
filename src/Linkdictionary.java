@@ -40,6 +40,13 @@ public class Linkdictionary {
             long totalTime = endTime - startTime;
             System.out.println(totalTime + " nanoseconds elapsed");
 
+            Scanner scan = new Scanner(System.in);
+
+            for (int arg = 0; arg<10 ; arg++) { // hasta 10 args
+                System.out.println("To find a word position input: word  (The word you want to find)," + "To find a word at an index input: index (the index you want to find) or exit to finish looking.  ");
+                String command = scan.nextLine();
+                String[] tokens = command.split(" ");
+
         } catch (IOException e) {
             e.printStackTrace();
         }
