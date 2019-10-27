@@ -38,4 +38,20 @@ public class Linkdictionary {
         }
 
     }
+
+    public static boolean sortList(String inputvalue, List list){
+        boolean retorno = false;
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).toString().toLowerCase().compareTo(inputvalue.toLowerCase()) > 0) {
+                if(i == 0){
+                    list.add(0, inputvalue);
+                }else{
+                    list.add(i, inputvalue);
+                }
+                retorno = true;
+                break;
+            }
+        }
+        return retorno;
+    }
 }
