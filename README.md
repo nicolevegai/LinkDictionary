@@ -33,6 +33,7 @@ You will work in pairs to create a JAVA project to manage a dictionary built usi
   * [.gitignore](https://github.com/nicolevegai/LinkDictionary/blob/master/.gitignore)
   * [LinkDictionary.java](https://github.com/nicolevegai/LinkDictionary/blob/master/src/Linkdictionary.java)
   * [unsorteddict.txt](https://github.com/nicolevegai/LinkDictionary/blob/master/unsorteddict.txt)
+  * [sorteddict.txt](https://github.com/nicolevegai/LinkDictionary/blob/master/sorteddict.txt)
  
  ## Our Solution
  ### Linked List and File Reader
