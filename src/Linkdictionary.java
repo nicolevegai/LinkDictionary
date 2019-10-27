@@ -7,7 +7,8 @@ import java.util.Scanner;
 public class Linkdictionary {
 
     public static void main(String args[]) throws NumberFormatException {
-
+        long startTime = System.nanoTime();
+        
         BufferedReader reader;
         LinkedList<String> dict = new LinkedList<String>();
         try {
@@ -33,6 +34,12 @@ public class Linkdictionary {
             }
 
             writer.close();
+
+            System.out.println("END!!!");
+            long endTime   = System.nanoTime();
+            long totalTime = endTime - startTime;
+            System.out.println(totalTime + " nanoseconds elapsed");
+
         } catch (IOException e) {
             e.printStackTrace();
         }
