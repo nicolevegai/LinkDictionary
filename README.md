@@ -37,6 +37,7 @@ You will work in pairs to create a JAVA project to manage a dictionary built usi
 
 ### The Files included in this Repository are:
   * [README.md](https://github.com/nicolevegai/LinkDictionary/blob/master/README.md)
+  * [.gitignore](https://github.com/nicolevegai/LinkDictionary/blob/master/.gitignore)
   * [LinkDictionary.java](https://github.com/nicolevegai/LinkDictionary/blob/master/src/Linkdictionary.java)
 
 #### To contact the collaborators please write us an email
