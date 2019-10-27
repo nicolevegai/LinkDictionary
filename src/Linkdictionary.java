@@ -46,6 +46,22 @@ public class Linkdictionary {
                 System.out.println("To find a word position input: word  (The word you want to find)," + "To find a word at an index input: index (the index you want to find) or exit to finish looking.  ");
                 String command = scan.nextLine();
                 String[] tokens = command.split(" ");
+                if (tokens[0].equalsIgnoreCase("index")) {
+                    int index = Integer.parseInt(tokens[1]);
+                    if (index > dict.size()) {
+                        System.out.println("Invalid input");
+                    } else {
+                        System.out.println(dict.get(index));
+                    }
+                } else if (tokens[0].equalsIgnoreCase("word")) {
+                    int index = 0;
+                    while (!dict.get(index).equalsIgnoreCase(tokens[1])) {
+                        index++;
+                        if (index > dict.size()) {
+                            System.out.println("The word couldn't be found");
+                        }
+                    }
+                    System.out.println(index);
 
         } catch (IOException e) {
             e.printStackTrace();
