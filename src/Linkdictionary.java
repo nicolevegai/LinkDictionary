@@ -26,7 +26,7 @@ public class Linkdictionary {
                 line = reader.readLine();
             }
             reader.close();
-            BufferedWriter writer = new BufferedWriter(new FileWriter("sorteddict.txt"));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("sorteddict2.txt"));
             for (int i = 0; i < dict.size(); i++) {
                 System.out.println(dict.get(i));
                 writer.write(dict.get(i).toString());
@@ -49,7 +49,7 @@ public class Linkdictionary {
                 if (tokens[0].equalsIgnoreCase("index")) {
                     int index = Integer.parseInt(tokens[1]);
                     if (index > dict.size()) {
-                        System.out.println("Invalid input");
+                        System.out.println("-1");// si no existe ese numero
                     } else {
                         System.out.println(dict.get(index));
                     }
@@ -58,10 +58,12 @@ public class Linkdictionary {
                     while (!dict.get(index).equalsIgnoreCase(tokens[1])) {
                         index++;
                         if (index > dict.size()) {
-                            System.out.println("The word couldn't be found");
+                            System.out.println("-1");// si no existe esa palabra
                         }
                     }
                     System.out.println(index);
+
+
                 } else if(tokens[0].equalsIgnoreCase("exit")){
                     break;
                 }
