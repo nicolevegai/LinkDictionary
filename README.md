@@ -76,7 +76,7 @@ To Sort the Linked List we created a method called sortList where using a for lo
             return retorno;
         }
 ### New File Creation 
-We used the object BufferedWriter and FileWriter to write the sorted words into a new file. 
+We used the object [BufferedReader](https://docs.oracle.com/javase/7/docs/api/java/io/BufferedReader.html) and [FileWriter](https://docs.oracle.com/javase/7/docs/api/java/io/FileWriter.html) to write the sorted words into a new file. 
 
     BufferedWriter writer = new BufferedWriter(new FileWriter("sorteddict2.txt"));
             for (int i = 0; i < dict.size(); i++) {
