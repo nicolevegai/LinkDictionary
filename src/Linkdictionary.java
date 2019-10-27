@@ -26,7 +26,7 @@ public class Linkdictionary {
                 line = reader.readLine();
             }
             reader.close();
-            BufferedWriter writer = new BufferedWriter(new FileWriter("sorteddict2.txt"));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("sorteddict.txt"));
             for (int i = 0; i < dict.size(); i++) {
                 System.out.println(dict.get(i));
                 writer.write(dict.get(i).toString());
@@ -62,7 +62,6 @@ public class Linkdictionary {
                         }
                     }
                     System.out.println(index);
-
 
                 } else if(tokens[0].equalsIgnoreCase("exit")){
                     break;
