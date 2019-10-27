@@ -62,6 +62,11 @@ public class Linkdictionary {
                         }
                     }
                     System.out.println(index);
+                } else if(tokens[0].equalsIgnoreCase("exit")){
+                    break;
+                }
+            }
+            scan.close();
 
         } catch (IOException e) {
             e.printStackTrace();
