@@ -88,7 +88,7 @@ We used the object [BufferedReader](https://docs.oracle.com/javase/7/docs/api/ja
             writer.close();
 
 ### Arguments
-We used the Scanner class so the user can input a 0 to 10 arguments to find a the position of a word or a word in a certain positon. If the word or the index does not exist the program will print "-1". The user can enter exit to stop looking for words or positions. 
+We used the [Scanner class](https://docs.oracle.com/javase/7/docs/api/java/util/Scanner.html) so the user can input a 0 to 10 arguments to find a the position of a word or a word in a certain positon. If the word or the index does not exist the program will print "-1". The user can enter exit to stop looking for words or positions. 
 
         
         Scanner scan = new Scanner(System.in);
