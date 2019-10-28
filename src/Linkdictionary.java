@@ -7,10 +7,14 @@ import java.util.Scanner;
 public class Linkdictionary {
 
     public static void main(String args[]) throws NumberFormatException {
-        long startTime = System.nanoTime();
+        long startTime = System.currentTimeMillis();
+
+        LinkedList<String> dict = new LinkedList<String>;
 
         BufferedReader reader;
-        LinkedList<String> dict = new LinkedList<String>();
+
+
+
         try {
             //
             reader = new BufferedReader(new FileReader("unsorteddict.txt"));
@@ -22,11 +26,18 @@ public class Linkdictionary {
                     if (!sortList(line, dict)) {
                         dict.add(line);
                     }
+                    System.out.println(dict.indexOf(line));
                 }
                 line = reader.readLine();
             }
+
+            long endTime   = System.currentTimeMillis();
+            long totalTime = endTime - startTime;
+            System.out.println(totalTime + " miliseconds elapsed");
             reader.close();
-            BufferedWriter writer = new BufferedWriter(new FileWriter("sorteddict.txt"));
+            System.out.println("END!!!");
+
+            BufferedWriter writer = new BufferedWriter(new FileWriter("prueba.txt"));
             for (int i = 0; i < dict.size(); i++) {
                 System.out.println(dict.get(i));
                 writer.write(dict.get(i).toString());
@@ -35,10 +46,9 @@ public class Linkdictionary {
 
             writer.close();
 
-            System.out.println("END!!!");
-            long endTime   = System.nanoTime();
-            long totalTime = endTime - startTime;
-            System.out.println(totalTime + " nanoseconds elapsed");
+
+
+
 
             Scanner scan = new Scanner(System.in);
 
@@ -77,6 +87,7 @@ public class Linkdictionary {
 
     public static boolean sortList(String inputvalue, List list){
         boolean retorno = false;
+
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).toString().toLowerCase().compareTo(inputvalue.toLowerCase()) > 0) {
                 if(i == 0){
