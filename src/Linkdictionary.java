@@ -9,7 +9,7 @@ public class Linkdictionary {
     public static void main(String args[]) throws NumberFormatException {
         long startTime = System.currentTimeMillis();
 
-        LinkedList<String> dict = new LinkedList<String>;
+        LinkedList<String> dict = new LinkedList<String>();
 
         BufferedReader reader;
 
