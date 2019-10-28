@@ -56,7 +56,7 @@ You will work in pairs to create a JAVA project to manage a dictionary built usi
 
 In this table, we can see the time it takes to sort up to 10000 words. 
 
-![graph](/Users/nicolevega/Documents/IE\ UNIVERSITY/3rd\ Year/Software\ Development/Imagen\ 1.jpg)
+![graph](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/74911445_10215327754609687_4745440164837326848_n.jpg?_nc_cat=111&_nc_oc=AQmINfYRU50j1KjxSYQYizQRFwtkUwo25s4F1weLTbdY9kJUpGtlmpwAxgDisKo_sj4&_nc_ht=scontent-mad1-1.xx&oh=18514017dd7700126c97d1e68801abb4&oe=5E19D30E)
  
 
 #### To contact the collaborators please write us an email
