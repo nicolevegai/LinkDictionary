@@ -2,10 +2,9 @@
 ## LinkDictionary TESTING
     Pair Work made by: Juan Felipe Gonzalez and Nicole Vega 
     
-    This branch is the testing of our LinkDictionary program. Our goal is to find inefficienncies in the code to improve it. 
-    
-    
 
+This branch is the testing of our LinkDictionary program. Our goal is to find inefficienncies in the code to improve it. And then test how our program runs with ...... 
+   
 ### Instructions
 You will work in pairs to create a JAVA project to manage a dictionary built using Linked lists. 
 
@@ -54,9 +53,10 @@ You will work in pairs to create a JAVA project to manage a dictionary built usi
 | 10         |  10000            |  203354      | 203|
 
 
-In this table, we can see the time it takes to sort up to 10000 words. 
+In this table, we can observe the time it takes to sort up to 10000 words. As the number of words increases so does the time. In the graph below we can see the clear positive tendency. 
 
 ![graph](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/74911445_10215327754609687_4745440164837326848_n.jpg?_nc_cat=111&_nc_oc=AQmINfYRU50j1KjxSYQYizQRFwtkUwo25s4F1weLTbdY9kJUpGtlmpwAxgDisKo_sj4&_nc_ht=scontent-mad1-1.xx&oh=18514017dd7700126c97d1e68801abb4&oe=5E19D30E)
+
  
 
 #### To contact the collaborators please write us an email
