@@ -53,7 +53,10 @@ You will work in pairs to create a JAVA project to manage a dictionary built usi
 | 9          |  9000             |  135479      | 135|
 | 10         |  10000            |  203354      | 203|
 
-In this table, we show the time it takes to sort up to 10000 words. 
+
+In this table, we can see the time it takes to sort up to 10000 words. 
+
+![graph](/Users/nicolevega/Documents/IE\ UNIVERSITY/3rd\ Year/Software\ Development/Imagen\ 1.jpg)
  
 
 #### To contact the collaborators please write us an email
