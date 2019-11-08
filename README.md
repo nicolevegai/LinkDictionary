@@ -52,8 +52,8 @@ This branch is the testing of our LinkDictionary program. Our goal is to find in
  
  | Method    |  Time elapsed in ms| 
 |------------|:-----------------:|
-| **read(dict)**          |              | 
-|**writeFile(dict)**       |  207       |
+| **read(dict)**          |   183           | 
+|**writeFile(dict)**       |  186       |
 | **scanConsole(dict)**       |  2350    |
 
 **sortList()**
