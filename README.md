@@ -46,7 +46,7 @@ This branch is the testing of our LinkDictionary program. Our goal is to find in
  
  ## Our Testing
  
- ### Placing Timers to find Innfeciencies 
+ ### Placing Timers to find Inneficiencies 
  We placed timers to see in how much different methods where finished. 
  
  
