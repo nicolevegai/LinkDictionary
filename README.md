@@ -13,7 +13,7 @@ This branch is the testing of our LinkDictionary program. Our goal is to find in
     
     **To deliver:**
     * Place several timers to control what time it takes to do certain tasks. Do printouts to see that info on the console
-    * Sincesometaskstakeavariableamountoftime,calculatetheaverage,maximumandminimumof certain tasks to have a better understanding of the limitations of our algorithms 
+    * Since some tasks take a variable amount of time, calculate the average, maximum and minimum of certain tasks to have a better understanding of the limitations of our algorithms 
     * Find bottlenecks and fix them 
                                        
 #### Verification test
@@ -46,7 +46,9 @@ This branch is the testing of our LinkDictionary program. Our goal is to find in
  
  ## Our Testing
  
- ### Placing Timers to find Inneficiencies 
+ ### Performance test
+ 
+ #### Placing Timers to find Inneficiencies 
  We placed timers to see in how much different methods where finished. 
  
  
@@ -89,7 +91,7 @@ In this table, we can observe the time it takes to sort up to 10000 words. As th
 After realizing that what was maing inefficient to our code was the sorting method we decided to look for another sorting algorithm. We found that [merge sorting](https://www.geeksforgeeks.org/merge-sort-for-linked-list/) works well with linked lists. 
 
 
-#### read(dict)
+##### read(dict)
         
       read(dict);
             endTime = (System.currentTimeMillis() - startTime);
@@ -111,7 +113,7 @@ After realizing that what was maing inefficient to our code was the sorting meth
 | Maximum    |    |
 | Minimum   |    |
             
-#### writeFile(dict)
+##### writeFile(dict)
         
         writeFile(dict);
             endTime = (System.currentTimeMillis() - startTime);
@@ -134,7 +136,7 @@ After realizing that what was maing inefficient to our code was the sorting meth
 | Minimum   |    |
             
  
-### scanConsole()
+##### scanConsole()
 
     scanConsole(dict);
             endTime = (System.currentTimeMillis() - startTime);
@@ -161,7 +163,16 @@ After realizing that what was maing inefficient to our code was the sorting meth
 ### Improvements
 
 #### Sort list faster
+ 
+ 
+ 
 
+### Verification Test 
+
+Add code that performs a verification test when the value “-1” is passed to the program as an argument
+      * Why don’t we choose the word “test” as an argument to activate the test?
+     * Check with several words that the position matches
+     * Performs a full test of the 10,000 words
 
 
  
