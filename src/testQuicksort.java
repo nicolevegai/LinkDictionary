@@ -5,26 +5,26 @@ import java.util.Scanner;
 
 public class testQuicksort {
 
-    LinkedList<String> dict = new LinkedList<String>();
 
-    public static void main(String args[]) throws NumberFormatException {
+    public static void main(String[] args) throws NumberFormatException {
 
-
+        LinkedList<String> dict = new LinkedList<String>();
 
         // TIME TESTING
         long startTime = System.currentTimeMillis();
 
-        sortList();
-        long endTime = (System.currentTimeMillis() - startTime);
-        System.out.println("Time to sort Linked List: " + endTime + "ms");
 
         try {
 
-            read();
+            sortList();
+            long endTime = (System.currentTimeMillis() - startTime);
+            System.out.println("Time to sort Linked List: " + endTime + "ms");
+
+            read(dict);
             endTime = (System.currentTimeMillis() - startTime);
             System.out.println("file read in: " + endTime + "ms");
 
-            writeFile();
+            writeFile(dict);
             endTime = (System.currentTimeMillis() - startTime);
             System.out.println("New file written in: " + endTime + "ms");
 
@@ -40,52 +40,54 @@ public class testQuicksort {
 
     }
 
-    public static void read()throws FileNotFoundException {
 
-                try {
-                    BufferedReader reader = new BufferedReader(new FileReader("unsorteddict.txt"));//0 milisecond
-                    String line = reader.readLine(); //1 milisecond
-                    int counter = 0;
-                    while (line != null) {
+    public static void read(LinkedList dict) throws FileNotFoundException {
+        long startTime = System.currentTimeMillis();
 
-                        if (dict.size() == 0) {
-                            dict.add(line);
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("unsorteddict.txt"));//0 milisecond
+            String line = reader.readLine(); //1 milisecond
+            int counter = 0;
+            while (line != null) {
 
-                        } else {
-                            if (!sortList(line, dict)) {
-                                dict.add(line);
-                            }
-                            // System.out.println(dict.indexOf(line));
-                        }
-                        line = reader.readLine();
-                        counter++;
-                        if (counter > 1000) {
-                            long endTime = System.currentTimeMillis();
-                            long totalTime = endTime - startTime;
-                            System.out.println(totalTime + " miliseconds elapsed or " + totalTime / 1000 + " seconds");
-                            counter = 0;
-                        }
+                if (dict.size() == 0) {
+                    dict.add(line);
+
+                } else {
+                    if (!sortList(line, dict)) {
+                        dict.add(line);
                     }
-
-
-                    reader.close();
-                    System.out.println("END!!!");
-
-
-                } catch (IOException e) {
-                    e.printStackTrace()
+                    // System.out.println(dict.indexOf(line));
                 }
+                line = reader.readLine();
 
+                counter++;
+                if (counter > 1000) {
+                    long endTime = System.currentTimeMillis();
+                    long totalTime = endTime - startTime;
+                    System.out.println(totalTime + " miliseconds elapsed or " + totalTime / 1000 + " seconds");
+                    counter = 0;
+                }
             }
-    public static void createLinkedList() {
 
 
+            reader.close();
+            System.out.println("END!!!");
 
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
-    public static void writeFile() throws FileNotFoundException, UnsupportedEncodingException {
+    }
 
-            BufferedWriter writer = new BufferedWriter(new FileWriter("prueba.txt"));
+
+    public static void writeFile(LinkedList dict) throws FileNotFoundException, UnsupportedEncodingException {
+
+        BufferedWriter writer;
+
+        try {
+            writer = new BufferedWriter(new FileWriter("prueba.txt"));
             for (int i = 0; i < dict.size(); i++) {
                 System.out.println(dict.get(i));
                 writer.write(dict.get(i).toString());
@@ -94,27 +96,32 @@ public class testQuicksort {
 
             writer.close();
 
-            }
-
-
-    public static boolean sortList(String inputvalue, List list) {
-        boolean retorno = false;
-
-        for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).toString().toLowerCase().compareTo(inputvalue.toLowerCase()) > 0) {
-                if (i == 0) {
-                    list.add(0, inputvalue);
-                } else {
-                    list.add(i, inputvalue);
-                }
-                retorno = true;
-                break;
-            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        return retorno;
     }
 
-    public static void scanConsole() throws FileNotFoundException {
+
+    public static boolean sortList(String inputvalue, List list) throws FileNotFoundException {
+        {
+            boolean retorno = false;
+
+            for (int i = 0; i < list.size(); i++) {
+                if (list.get(i).toString().toLowerCase().compareTo(inputvalue.toLowerCase()) > 0) {
+                    if (i == 0) {
+                        list.add(0, inputvalue);
+                    } else {
+                        list.add(i, inputvalue);
+                    }
+                    retorno = true;
+                    break;
+                }
+            }
+            return retorno;
+        }
+    }
+
+    public static void scanConsole(LinkedList dict) throws FileNotFoundException {
         try {
 
 
@@ -146,13 +153,8 @@ public class testQuicksort {
             }
             scan.close();
         } catch (IOException e) {
-            e.printStackTrace()
+            e.printStackTrace();
         }
 
     }
 }
-
-
-
-
-
