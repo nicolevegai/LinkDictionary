@@ -117,7 +117,7 @@ After realizing that what was maing inefficient to our code was the sorting meth
             endTime = (System.currentTimeMillis() - startTime);
             System.out.println("New file written in: " + endTime + " ms"); 
             
-            | Number of repetitions of method   |  Time elapsed in ms| 
+| Number of repetitions of method   |  Time elapsed in ms| 
 |------------|:-----------------:|
 | 1     |    | 
 | 2     |    |
