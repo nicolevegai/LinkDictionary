@@ -45,6 +45,48 @@ This branch is the testing of our LinkDictionary program. Our goal is to find in
   * [sorteddict.txt](https://github.com/nicolevegai/LinkDictionary/blob/test/sorteddict.txt)
  
  ## Our Testing
+ 
+ ### Placing Timers 
+ We placed timers to see in how much different methods where finished. 
+ 
+ 
+ | Method    |  Time elapsed in ms| 
+|------------|:-----------------:|
+| sortlist()          |              |
+| read(dict)          |              | 
+| writeFile(dict)       |  207       |
+| scanConsole(dict)       |  2350    |
+ 
+ #### sortlist()
+ 
+    sortList();
+        long endTime = (System.currentTimeMillis() - startTime);
+        System.out.println("Time to sort Linked List: " + endTime + " ms");
+
+#### read(dict)
+        
+      read(dict);
+            endTime = (System.currentTimeMillis() - startTime);
+            System.out.println("file read in: " + endTime + " ms");
+            
+#### writeFile(dict)
+        
+        writeFile(dict);
+            endTime = (System.currentTimeMillis() - startTime);
+            System.out.println("New file written in: " + endTime + " ms"); 
+ 
+### scanConsole()
+
+    scanConsole(dict);
+            endTime = (System.currentTimeMillis() - startTime);
+            System.out.println("Console scanned in: " + endTime + " ms"); //yaaa
+
+
+ 
+ 
+ 
+ 
+ 
  ### Finding Inefficiencies
  
  We found that the most inefficient part of our code is the sortList method. We realized that using CurrentTimeMills() method we printed how much it took for 1000 words to be sorted. And the times where increasing with each iteration. 
