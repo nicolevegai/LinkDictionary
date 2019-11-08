@@ -14,7 +14,6 @@ public class Linkdictionary {
         BufferedReader reader;
 
 
-
         try {
             //
             reader = new BufferedReader(new FileReader("unsorteddict.txt"));

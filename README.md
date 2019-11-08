@@ -2,7 +2,7 @@
 ## LinkDictionary
     Pair Work made by: Juan Felipe Gonzalez and Nicole Vega 
     
-This Repository is a project for our Software Development couse. We are creating a Dictionary of ordered words using linked lists. The idea of the project is for it to be done without the sorting method included in the java library. Therefore we had to create an algorithm that would sort the words by placing them in alphabetical order in the linked list, as they were read from the unsorted word list.   
+    his Repository is a project for our Software Development couse. We are creating a Dictionary of ordered words using linked lists. The idea of the project is for it to be done without the sorting method included in the java library. Therefore we had to create an algorithm that would sort the words by placing them in alphabetical order in the linked list, as they were read from the unsorted word list.   
 
 ### Instructions
 You will work in pairs to create a JAVA project to manage a dictionary built using Linked lists. 
