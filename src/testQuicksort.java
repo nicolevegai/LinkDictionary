@@ -13,24 +13,23 @@ public class testQuicksort {
         // TIME TESTING
         long startTime = System.currentTimeMillis();
 
+        sortList();
+        long endTime = (System.currentTimeMillis() - startTime);
+        System.out.println("Time to sort Linked List: " + endTime + " ms");
 
         try {
 
-            sortList();
-            long endTime = (System.currentTimeMillis() - startTime);
-            System.out.println("Time to sort Linked List: " + endTime + "ms");
-
             read(dict);
             endTime = (System.currentTimeMillis() - startTime);
-            System.out.println("file read in: " + endTime + "ms");
+            System.out.println("file read in: " + endTime + " ms");
 
             writeFile(dict);
             endTime = (System.currentTimeMillis() - startTime);
-            System.out.println("New file written in: " + endTime + "ms");
+            System.out.println("New file written in: " + endTime + " ms"); //yaaa
 
-            scanConsole();
+            scanConsole(dict);
             endTime = (System.currentTimeMillis() - startTime);
-            System.out.println("Console scanned in: " + endTime + "ms");
+            System.out.println("Console scanned in: " + endTime + " ms"); //yaaa
 
 
         } catch (FileNotFoundException | UnsupportedEncodingException e) {
@@ -42,10 +41,9 @@ public class testQuicksort {
 
 
     public static void read(LinkedList dict) throws FileNotFoundException {
-        long startTime = System.currentTimeMillis();
 
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("unsorteddict.txt"));//0 milisecond
+            BufferedReader reader = new BufferedReader(new FileReader("test.txt"));//0 milisecond
             String line = reader.readLine(); //1 milisecond
             int counter = 0;
             while (line != null) {
@@ -57,10 +55,11 @@ public class testQuicksort {
                     if (!sortList(line, dict)) {
                         dict.add(line);
                     }
-                    // System.out.println(dict.indexOf(line));
+                     System.out.println(dict.indexOf(line));
                 }
                 line = reader.readLine();
 
+                /*
                 counter++;
                 if (counter > 1000) {
                     long endTime = System.currentTimeMillis();
@@ -68,6 +67,8 @@ public class testQuicksort {
                     System.out.println(totalTime + " miliseconds elapsed or " + totalTime / 1000 + " seconds");
                     counter = 0;
                 }
+
+                 */
             }
 
 
@@ -102,7 +103,7 @@ public class testQuicksort {
     }
 
 
-    public static boolean sortList(String inputvalue, List list) throws FileNotFoundException {
+    public static boolean sortList(String inputvalue, List list)  {
         {
             boolean retorno = false;
 
@@ -121,40 +122,36 @@ public class testQuicksort {
         }
     }
 
-    public static void scanConsole(LinkedList dict) throws FileNotFoundException {
-        try {
+    public static void scanConsole(LinkedList dict) {
 
 
-            Scanner scan = new Scanner(System.in);
-            for (int arg = 0; arg < 10; arg++) { // hasta 10 args
-                System.out.println("To find a word position input: word  (The word you want to find)," + "To find a word at an index input: index (the index you want to find) or exit to finish looking.  ");
-                String command = scan.nextLine();
-                String[] tokens = command.split(" ");
-                if (tokens[0].equalsIgnoreCase("index")) {
-                    int index = Integer.parseInt(tokens[1]);
-                    if (index > dict.size()) {
-                        System.out.println("-1");// si no existe ese numero
-                    } else {
-                        System.out.println(dict.get(index));
-                    }
-                } else if (tokens[0].equalsIgnoreCase("word")) {
-                    int index = 0;
-                    while (!dict.get(index).equalsIgnoreCase(tokens[1])) {
-                        index++;
-                        if (index > dict.size()) {
-                            System.out.println("-1");// si no existe esa palabra
-                        }
-                    }
-                    System.out.println(index);
-
-                } else if (tokens[0].equalsIgnoreCase("exit")) {
-                    break;
+        Scanner scan = new Scanner(System.in);
+        for (int arg = 0; arg < 10; arg++) { // hasta 10 args
+            System.out.println("To find a word position input: word  (The word you want to find)," + "To find a word at an index input: index (the index you want to find) or exit to finish looking.  ");
+            String command = scan.nextLine();
+            String[] tokens = command.split(" ");
+            if (tokens[0].equalsIgnoreCase("index")) {
+                int index = Integer.parseInt(tokens[1]);
+                if (index > dict.size()) {
+                    System.out.println("-1");// si no existe ese numero
+                } else {
+                    System.out.println(dict.get(index));
                 }
+            } else if (tokens[0].equalsIgnoreCase("word")) {
+                int index = 0;
+                while (!dict.get(index).equals(tokens[1])) {
+                    index++;
+                    if (index > dict.size()) {
+                        System.out.println("-1");// si no existe esa palabra
+                    }
+                }
+                System.out.println(index);
+
+            } else if (tokens[0].equalsIgnoreCase("exit")) {
+                break;
             }
-            scan.close();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
+        scan.close();
 
     }
 }
