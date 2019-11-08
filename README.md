@@ -95,11 +95,44 @@ After realizing that what was maing inefficient to our code was the sorting meth
             endTime = (System.currentTimeMillis() - startTime);
             System.out.println("file read in: " + endTime + " ms");
             
+| Number of repetitions of method   |  Time elapsed in ms| 
+|------------|:-----------------:|
+| 1     |    | 
+| 2     |    |
+| 3     |    |
+| 4     |    |
+| 5     |    |
+| 6     |    |
+| 7     |    |
+| 8     |    |
+| 9     |    |
+| 10    |    |
+| Average   |    |
+| Maximum    |    |
+| Minimum   |    |
+            
 #### writeFile(dict)
         
         writeFile(dict);
             endTime = (System.currentTimeMillis() - startTime);
             System.out.println("New file written in: " + endTime + " ms"); 
+            
+            | Number of repetitions of method   |  Time elapsed in ms| 
+|------------|:-----------------:|
+| 1     |    | 
+| 2     |    |
+| 3     |    |
+| 4     |    |
+| 5     |    |
+| 6     |    |
+| 7     |    |
+| 8     |    |
+| 9     |    |
+| 10    |    |
+| Average   |    |
+| Maximum    |    |
+| Minimum   |    |
+            
  
 ### scanConsole()
 
@@ -108,11 +141,27 @@ After realizing that what was maing inefficient to our code was the sorting meth
             System.out.println("Console scanned in: " + endTime + " ms"); //yaaa
  
 
- 
+ | Number of repetitions of method   |  Time elapsed in ms| 
+|------------|:-----------------:|
+| 1     |    | 
+| 2     |    |
+| 3     |    |
+| 4     |    |
+| 5     |    |
+| 6     |    |
+| 7     |    |
+| 8     |    |
+| 9     |    |
+| 10    |    |
+| Average   |    |
+| Maximum    |    |
+| Minimum   |    |
+            
 
 ### Improvements
 
 #### Sort list faster
+
 
 
  
