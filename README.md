@@ -14,7 +14,7 @@ You will work in pairs to create a JAVA project to manage a dictionary built usi
   **4.**  When they decide, they will commit the code, push it to a repository created by themselves and then the other member 
 
 
-### Requisites:
+## Requisites:
 
 #### Performance test
   * Using System.currentTimeMillis() to evaluate timing in different parts of your code
