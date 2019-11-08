@@ -18,7 +18,8 @@ You will work in pairs to create a JAVA project to manage a dictionary built usi
 
 #### Performance test
   * Using System.currentTimeMillis() to evaluate timing in different parts of your code
-  * Find bottlenecks and look for a new solution to them
+  * Find bottlenecks and look for a new solution to them. 
+    
     **To deliver:**
     * Place several timers to control what time it takes to do certain tasks. Do printouts to see that info on the console
     * Sincesometaskstakeavariableamountoftime,calculatetheaverage,maximumandminimumof certain tasks to have a better understanding of the limitations of our algorithms 
@@ -28,14 +29,17 @@ You will work in pairs to create a JAVA project to manage a dictionary built usi
   * Create a test with known values
   * https://tinyurl.com/yxkho8uz
   * Use unsortedDictTest as a test input and check against the values in sortedDictTest
-     * You can check random values from your sorted list against the sortedDictTest  What’s the problem of testing random values?
+     * You can check random values from your sorted list against the sortedDictTest 
+     * What’s the problem of testing random values?
      * How much it takes to test the 10,000 words?
-     * Does it worth it?
-     **To deliver: **
+     * Does it worth it?   
+    
+    **To deliver:**
      * Add code that performs a verification test when the value “-1” is passed to the program as an argument
       * Why don’t we choose the word “test” as an argument to activate the test?
      * Check with several words that the position matches
      * Performs a full test of the 10,000 words
+     
      __Check against different inputs__
      * Inputs not expected
      * Numbers beyond the limits, etc. 
