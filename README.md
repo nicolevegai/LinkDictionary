@@ -4,15 +4,6 @@
     
 
 This branch is the testing of our LinkDictionary program. Our goal is to find inefficienncies in the code to improve it. And then test how our program runs with ...... 
-   
-### Instructions
-You will work in pairs to create a JAVA project to manage a dictionary built using Linked lists. 
-
-  **1.**  First create a project on Github (follow the usual instructions).   
-  **2.**  Clone the project on one’s computer.   
-  **3.**  Both members will be coding in one’s computer.   
-  **4.**  When they decide, they will commit the code, push it to a repository created by themselves and then the other member 
-
 
 ## Requisites:
 
