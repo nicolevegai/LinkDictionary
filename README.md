@@ -3,7 +3,7 @@
     Pair Work made by: Juan Felipe Gonzalez and Nicole Vega 
     
 
-This branch is the testing of our LinkDictionary program. Our goal is to find inefficienncies in the code to improve it. And then test how our program runs with ...... 
+This branch is the testing of our LinkDictionary program. Our goal is to find inefficienncies in the code to improve it. And then test how our program runs with 
 
 ## Requisites:
 
@@ -53,7 +53,7 @@ This branch is the testing of our LinkDictionary program. Our goal is to find in
  
 **sortList()**
 
-We found that the most inefficient part of our code is the sortList method. We realized that using CurrentTimeMills() method we printed how much it took for 1000 words to be sorted. And the times where increasing with each iteration. 
+We found that the most inefficient part of our code is the sortList method. We realized that using CurrentTimeMills() method we printed how much it took for 1000 words to be sorted. And the times where increasing with each iteration. For 10000 words the time elapsed is 2:03 minutes.  
     
      counter++;
                 if(counter > 1000){
@@ -92,11 +92,11 @@ After realizing that what was maing inefficient to our code was the sorting meth
             
 | Number of repetitions of method   |  Time elapsed in ms| 
 |------------|:-----------------:|
-| 1     |    | 
-| 2     |    |
-| 3     |    |
-| 4     |    |
-| 5     |    |
+| 1     |   288310 | 
+| 2     |   186160 |
+| 3     |   187814 |
+| 4     |   183752 |
+| 5     |   189252  |
 | 6     |    |
 | 7     |    |
 | 8     |    |
@@ -114,11 +114,11 @@ After realizing that what was maing inefficient to our code was the sorting meth
             
 | Number of repetitions of method   |  Time elapsed in ms| 
 |------------|:-----------------:|
-| 1     |    | 
-| 2     |    |
-| 3     |    |
-| 4     |    |
-| 5     |    |
+| 1     |  288479  | 
+| 2     |  186317  |
+| 3     |  187971  |
+| 4     |  183908  |
+| 5     |   189414  |
 | 6     |    |
 | 7     |    |
 | 8     |    |
@@ -138,11 +138,11 @@ After realizing that what was maing inefficient to our code was the sorting meth
 
  | Number of repetitions of method   |  Time elapsed in ms| 
 |------------|:-----------------:|
-| 1     |    | 
-| 2     |    |
-| 3     |    |
-| 4     |    |
-| 5     |    |
+| 1     |   305544 | 
+| 2     |   191291 |
+| 3     |   191298 |
+| 4     |   187006 |
+| 5     |  194548  |
 | 6     |    |
 | 7     |    |
 | 8     |    |
