@@ -163,7 +163,7 @@ After realizing that what was maing inefficient to our code was the sorting meth
 ### Verification Test 
 
 Add code that performs a verification test when the value “-1” is passed to the program as an argument
-      * Why don’t we choose the word “test” as an argument to activate the test?
+     * Why don’t we choose the word “test” as an argument to activate the test?
      * Check with several words that the position matches
      * Performs a full test of the 10,000 words
 
