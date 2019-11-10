@@ -55,7 +55,7 @@ This branch is the testing of our LinkDictionary program. Our goal is to find in
  
 **sortList()**
 
-We found that the most inefficient part of our code is the sortList method. We realized that using CurrentTimeMills() method we printed how much it took for 1000 words to be sorted. And the times where increasing with each iteration. For 10000 words the time elapsed is 3:38 minutes.  
+We found that the most inefficient part of our code is the sortList method. We realized that using CurrentTimeMills() method we printed how much it took for 1000 words to be sorted. And the times where increasing with each iteration. For 10000 words the time elapsed is 3:38 minutes. 
     
      counter++;
                 if(counter > 1000){
@@ -189,7 +189,7 @@ We realized that we could hold in an array all the arguments that were inputed t
                     System.out.println(index);
                 }
                 
-####Screenshot of Outpus
+#### Screenshot of Outputs
 
 ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/74614874_10215436107358438_5641640779693686784_n.jpg?_nc_cat=110&_nc_oc=AQmyfNPxPUO4sQaixjYBhD9M1lzDcYSXeOBNIJUuuJnvWIerIH4gHS2xQU9EU_bL0ec&_nc_ht=scontent-mad1-1.xx&oh=3249eca5eefa0e88347b04cc9c58bd6e&oe=5E620D0A )
 
@@ -198,7 +198,7 @@ We realized that we could hold in an array all the arguments that were inputed t
 
 ### Verification Test 
 
-To do the Verification Test in the scanConsole() method we added an if clause were if -1 was inputed then the test started. The test consisted in checking line per line if the words in the file SortDictus.txt (created by us) were in the same position as in sortedDictTest.txt.
+To do the Verification Test in the scanConsole() method we added an if clause were if -1 was inputed then the test started. The test consisted in checking line per line (10,000 words) if the words in the file SortDictus.txt (created by us) were in the same position as in sortedDictTest.txt. 
 
        for (int i = 0; i < comm.length ; i++){
                 try {
@@ -239,8 +239,9 @@ To do the Verification Test in the scanConsole() method we added an if clause we
                     }
               }                
      
-    
-              
+  #### Verification Test Screenshot 
+   ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/74675005_10215436153679596_2565502996624441344_n.jpg?_nc_cat=104&_nc_oc=AQkn6ipgKM24JWeGX3oj4U_wzr5OqX8AxnuKfq8TsIDUQG41gYC0waMDl6tMP9mj5bs&_nc_ht=scontent-mad1-1.xx&oh=9948e0f201335512bc71786f8b5f3d17&oe=5E430903)
+           
             
 
 Add code that performs a verification test when the value “-1” is passed to the program as an argument
