@@ -93,7 +93,7 @@ In this table, we can observe the time it takes to sort up to 10000 words. As th
             
 | Number of repetitions of method   |  Time elapsed in ms| 
 |------------|:-----------------:|
-| 1     |    | 
+| 1     |   193037 | 
 | 2     |   186160 |
 | 3     |   187814 |
 | 4     |   183752 |
@@ -101,7 +101,7 @@ In this table, we can observe the time it takes to sort up to 10000 words. As th
 | 6     |   186344 |
 | 7     |  203919  |
 | 8     |   197364 |
-| 9     |   199172 |
+| 9     |    |
 | 10    |    |
 | Average   |    |
 | Maximum    |    |
@@ -115,7 +115,7 @@ In this table, we can observe the time it takes to sort up to 10000 words. As th
             
 | Number of repetitions of method   |  Time elapsed in ms| 
 |------------|:-----------------:|
-| 1     |    | 
+| 1     |  193191  | 
 | 2     |  186317  |
 | 3     |  187971  |
 | 4     |  183908  |
@@ -123,7 +123,7 @@ In this table, we can observe the time it takes to sort up to 10000 words. As th
 | 6     | 186495  |
 | 7     |  204076 |
 | 8     |   197510 |
-| 9     |   199327 |
+| 9     |    |
 | 10    |    |
 | Average   |    |
 | Maximum    |    |
@@ -141,7 +141,7 @@ The scan console time depends in how much time the user inputs a value for the p
 
  | Number of repetitions of method   |  Time elapsed in ms| 
 |------------|:-----------------:|
-| 1     |    | 
+| 1     |  214245  | 
 | 2     |   191291 |
 | 3     |   191298 |
 | 4     |   187006 |
@@ -189,7 +189,12 @@ We realized that we could hold in an array all the arguments that were inputed t
                     System.out.println(index);
                 }
                 
-                
+####Screenshot of Outpus
+
+![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/74614874_10215436107358438_5641640779693686784_n.jpg?_nc_cat=110&_nc_oc=AQmyfNPxPUO4sQaixjYBhD9M1lzDcYSXeOBNIJUuuJnvWIerIH4gHS2xQU9EU_bL0ec&_nc_ht=scontent-mad1-1.xx&oh=3249eca5eefa0e88347b04cc9c58bd6e&oe=5E620D0A )
+
+
+
 
 ### Verification Test 
 
@@ -233,7 +238,8 @@ To do the Verification Test in the scanConsole() method we added an if clause we
                         readunsortchelu.close();
                     }
               }                
-              
+     
+    
               
             
 
