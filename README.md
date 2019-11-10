@@ -35,16 +35,6 @@ This branch is the testing of our LinkDictionary program. Our goal is to find in
      * Inputs not expected
      * Numbers beyond the limits, etc. 
     
-
-### The Files included in this Repository are:
-  * [README.md](https://github.com/nicolevegai/LinkDictionary/blob/test/README.md)
-  * [.gitignore](https://github.com/nicolevegai/LinkDictionary/blob/test/.gitignore)
-  * [LinkDictionary.java](https://github.com/nicolevegai/LinkDictionary/blob/test/src/Linkdictionary.java)
-  * [testQuickSort.java](https://github.com/nicolevegai/LinkDictionary/blob/test/src/testQuicksort.java) 
-  * [unsortedDict.txt](https://github.com/nicolevegai/LinkDictionary/blob/master/unsorteddict.txt) : Unsorted dict for us to sort 
-  * [sortDictUs.txt](https://github.com/nicolevegai/LinkDictionary/blob/test/SortDictus.txt) : File created afer sorting the words. 
-  * [sortedDictTest.txt](https://github.com/nicolevegai/LinkDictionary/blob/test/sortedDictTest.txt) : Sorted dictionary given to us to compare with the sorted file created by us. 
-
  
  ## Our Testing
  
@@ -55,7 +45,7 @@ This branch is the testing of our LinkDictionary program. Our goal is to find in
  
 **sortList()**
 
-We found that the most inefficient part of our code is the sortList method. We realized that using CurrentTimeMills() method we printed how much it took for 1000 words to be sorted. And the times where increasing with each iteration. For 10000 words the time elapsed is 3:38 minutes.  
+We found that the most inefficient part of our code is the sortList method. We realized that using CurrentTimeMills() method we printed how much it took for 1000 words to be sorted. And the times where increasing with each iteration. For 10000 words the time elapsed is 3:38 minutes. 
     
      counter++;
                 if(counter > 1000){
@@ -86,6 +76,8 @@ In this table, we can observe the time it takes to sort up to 10000 words. As th
 
 
 ##### read(dict)
+
+We repeated the read() method 10 times and found little time variances between them. The average time is 3,222 minutes (193370,7 ms) because of the bottleneck found in the sortlist() method. In the graphs below we can observe a more detail of each repetition. 
         
       read(dict);
             endTime = (System.currentTimeMillis() - startTime);
@@ -93,7 +85,7 @@ In this table, we can observe the time it takes to sort up to 10000 words. As th
             
 | Number of repetitions of method   |  Time elapsed in ms| 
 |------------|:-----------------:|
-| 1     |    | 
+| 1     |   193037 | 
 | 2     |   186160 |
 | 3     |   187814 |
 | 4     |   183752 |
@@ -101,13 +93,17 @@ In this table, we can observe the time it takes to sort up to 10000 words. As th
 | 6     |   186344 |
 | 7     |  203919  |
 | 8     |   197364 |
-| 9     |   199172 |
-| 10    |    |
-| Average   |    |
-| Maximum    |    |
-| Minimum   |    |
+| 9     |   200170 |
+| 10    |  205895  |
+| Average   |   193370,7 |
+| Maximum    |   205895 |
+| Minimum   |  183752  |
             
+ ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/75594548_10215436820296261_46527028530249728_n.jpg?_nc_cat=102&_nc_oc=AQkuxf_1i7aKH27YHmeoHntlTxea876BlYwjw5nm2LAcZiPvoYmE_6fG2EFVU91kMvI&_nc_ht=scontent-mad1-1.xx&oh=ff4e1d61fd5e4081b2df418ea0f56c6f&oe=5E419D41)    
+ 
 ##### writeFile(dict)
+We repeated the writeFile() method 10 times and found little time variances between them. The average time is 3,225 minutes (193528,1  ms) just 0,005 minutes more in average after the read() method is finished so we can see that it is really fast and efficient!. In the graphs below we can observe a more detail of each repetition. 
+        
         
         writeFile(dict);
             endTime = (System.currentTimeMillis() - startTime);
@@ -115,7 +111,7 @@ In this table, we can observe the time it takes to sort up to 10000 words. As th
             
 | Number of repetitions of method   |  Time elapsed in ms| 
 |------------|:-----------------:|
-| 1     |    | 
+| 1     |  193191  | 
 | 2     |  186317  |
 | 3     |  187971  |
 | 4     |  183908  |
@@ -123,16 +119,17 @@ In this table, we can observe the time it takes to sort up to 10000 words. As th
 | 6     | 186495  |
 | 7     |  204076 |
 | 8     |   197510 |
-| 9     |   199327 |
-| 10    |    |
-| Average   |    |
-| Maximum    |    |
-| Minimum   |    |
-            
+| 9     |  200341  |
+| 10    |   206058 |
+| Average   |  193528,1  |
+| Maximum    |  206058  |
+| Minimum   |  183908 |
+  
+   ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/75388387_10215436820256260_8607807862179102720_n.jpg?_nc_cat=103&_nc_oc=AQmSZ2zhfRoZMxgnDeaEr60khocM_FvyBUtV_kVvyHcBlanrb0Mkn5_qd8v76ESLwUo&_nc_ht=scontent-mad1-1.xx&oh=5c8668c7ef5e8a88d98b3a483938b2ac&oe=5E512CAA)
  
 ##### scanConsole()
 
-The scan console time depends in how much time the user inputs a value for the program to print. To test this we input an argument as soon as "Please input a minimum of 0 and a maximum of 10 commands args separated by a space to find a word or index" adding the same number of inputs ( 1 2 ).  
+The scan console time depends in how much time the user inputs a value for the program to print. To test this we input an argument as soon as "Please input a minimum of 0 and a maximum of 10 commands args separated by a space to find a word or index" adding the same number of inputs ( 1 2 ). The average time is 3,38 minutes (203144,7778 ms). We repeated this method 10 times and in the graphs below we can observe a more detail of each repetition. 
 
     scanConsole(dict);
             endTime = (System.currentTimeMillis() - startTime);
@@ -141,7 +138,7 @@ The scan console time depends in how much time the user inputs a value for the p
 
  | Number of repetitions of method   |  Time elapsed in ms| 
 |------------|:-----------------:|
-| 1     |    | 
+| 1     |  214245  | 
 | 2     |   191291 |
 | 3     |   191298 |
 | 4     |   187006 |
@@ -149,19 +146,20 @@ The scan console time depends in how much time the user inputs a value for the p
 | 6     |  188438 |
 | 7     |   225179 |
 | 8     |   219338 |
-| 9     |    |
-| 10    |    |
-| Average   |    |
-| Maximum    |    |
-| Minimum   |    |
-            
+| 9     |   221024 |
+| 10    |   210181 |
+| Average   |  203144,7778  |
+| Maximum   |  225179  |
+| Minimum   |  187006   |
+
+![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/72756057_10215436819576243_4840895074256551936_n.jpg?_nc_cat=107&_nc_oc=AQl12wGr8v77jb4roHPN3f0YVdlb4tW03h9jFYH8CE_cZScFssfGkPTR21uKEa1CPvg&_nc_ht=scontent-mad1-1.xx&oh=5b573717842b671ebf67f243fe7e89c7&oe=5E4F31DF)
 
 ### Improvements
 
 #### Sort list faster
 
-After realizing that what was making inefficient to our code was the sorting method we decided to look for another sorting algorithm. We found that [merge sorting](https://www.geeksforgeeks.org/merge-sort-for-linked-list/) works well with linked lists.
-The merge method drastically imporoves the loading times, however it is important to note that it requires big amounts of ram in order to work properly. 
+After realizing that what was making inefficient to our code was the sorting method we decided to look for another sorting algorithm. We found that [merge sorting](https://www.geeksforgeeks.org/merge-sort-for-linked-list/) works well with linked lists. 
+The merge method drastically improved performance times, however it is important to note that without allocating large amounts of ram to the JVM it will not work and most likely throw an exception. 
 
 The new time to sort the file is: 
  
@@ -190,11 +188,16 @@ We realized that we could hold in an array all the arguments that were inputed t
                     System.out.println(index);
                 }
                 
-                
+#### Screenshot of Outputs
+
+![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/74614874_10215436107358438_5641640779693686784_n.jpg?_nc_cat=110&_nc_oc=AQmyfNPxPUO4sQaixjYBhD9M1lzDcYSXeOBNIJUuuJnvWIerIH4gHS2xQU9EU_bL0ec&_nc_ht=scontent-mad1-1.xx&oh=3249eca5eefa0e88347b04cc9c58bd6e&oe=5E620D0A)
+
+
+
 
 ### Verification Test 
 
-To do the Verification Test in the scanConsole() method we added an if clause were if -1 was inputed then the test started. The test consisted in checking line per line if the words in the file SortDictus.txt (created by us) were in the same position as in sortedDictTest.txt.
+To do the Verification Test in the scanConsole() method we added an if clause were if -1 was inputed then the test started. The test consisted in checking line per line (10,000 words) if the words in the file SortDictus.txt (created by us) were in the same position as in sortedDictTest.txt. 
 
        for (int i = 0; i < comm.length ; i++){
                 try {
@@ -234,17 +237,16 @@ To do the Verification Test in the scanConsole() method we added an if clause we
                         readunsortchelu.close();
                     }
               }                
-              
-              
-            
+   
 
-Add code that performs a verification test when the value “-1” is passed to the program as an argument
-     * Why don’t we choose the word “test” as an argument to activate the test?
-     * Check with several words that the position matches
-     * Performs a full test of the 10,000 words
-
-
- 
+     
+  #### Verification Test Screenshot 
+   ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/74675005_10215436153679596_2565502996624441344_n.jpg?_nc_cat=104&_nc_oc=AQkn6ipgKM24JWeGX3oj4U_wzr5OqX8AxnuKfq8TsIDUQG41gYC0waMDl6tMP9mj5bs&_nc_ht=scontent-mad1-1.xx&oh=9948e0f201335512bc71786f8b5f3d17&oe=5E430903)
+   
+ #### Verification of words 
+ Here we can see that the words in the file SortDictus.txt and sortedDictTest.txt are in the same position
+ ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/72159719_10215437510513516_6590964350385651712_n.jpg?_nc_cat=103&_nc_oc=AQlsEmX1RQS0uIGI0RU1dOfeARObmPambGLNVe-t6diuS5Qdvs_b588S8MUKpWpjc9E&_nc_ht=scontent-mad1-1.xx&oh=b51521b0f5cb853483b0f4cf48e1aee1&oe=5E5032B4)
+           
 
 #### To contact the collaborators please write us an email
     mvega.ieu2017@student.ie.edu
