@@ -35,16 +35,6 @@ This branch is the testing of our LinkDictionary program. Our goal is to find in
      * Inputs not expected
      * Numbers beyond the limits, etc. 
     
-
-### The Files included in this Repository are:
-  * [README.md](https://github.com/nicolevegai/LinkDictionary/blob/test/README.md)
-  * [.gitignore](https://github.com/nicolevegai/LinkDictionary/blob/test/.gitignore)
-  * [LinkDictionary.java](https://github.com/nicolevegai/LinkDictionary/blob/test/src/Linkdictionary.java)
-  * [testQuickSort.java](https://github.com/nicolevegai/LinkDictionary/blob/test/src/testQuicksort.java) 
-  * [unsortedDict.txt](https://github.com/nicolevegai/LinkDictionary/blob/master/unsorteddict.txt) : Unsorted dict for us to sort 
-  * [sortDictUs.txt](https://github.com/nicolevegai/LinkDictionary/blob/test/SortDictus.txt) : File created afer sorting the words. 
-  * [sortedDictTest.txt](https://github.com/nicolevegai/LinkDictionary/blob/test/sortedDictTest.txt) : Sorted dictionary given to us to compare with the sorted file created by us. 
-
  
  ## Our Testing
  
