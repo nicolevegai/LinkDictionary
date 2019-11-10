@@ -7,12 +7,10 @@ public class testing {
 
 
     public static void main(String[] args) throws NumberFormatException {
-
         LinkedList<String> dict = new LinkedList<String>();
 
         // TIME TESTING
         long startTime = System.currentTimeMillis();
-
         try {
 
             read(dict);
@@ -26,14 +24,11 @@ public class testing {
             scanConsole(dict);
             endTime = (System.currentTimeMillis() - startTime);
             System.out.println("Console scanned in: " + endTime + " ms"); //yaaa
-
-
-        } catch (FileNotFoundException | UnsupportedEncodingException e) {
+        }
+        catch (FileNotFoundException | UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-
     }
-
     public static void read(LinkedList dict) throws FileNotFoundException {
 
         try {
@@ -45,14 +40,14 @@ public class testing {
                 if (dict.size() == 0) {
                     dict.add(line);
 
-                } else {
+                }
+                else {
                     if (!sortList(line, dict)) {
                         dict.add(line);
                     }
 //                     System.out.println(dict.indexOf(line));
                 }
                 line = reader.readLine();
-
                 /*
                 counter++;
                 if (counter > 1000) {
@@ -61,19 +56,16 @@ public class testing {
                     System.out.println(totalTime + " miliseconds elapsed or " + totalTime / 1000 + " seconds");
                     counter = 0;
                 }
-
                  */
             }
-
-
             reader.close();
 //            System.out.println("END!!!");
-
-
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
     }
+
     public static void writeFile(LinkedList dict) throws FileNotFoundException, UnsupportedEncodingException {
 
         BufferedWriter writer;
@@ -85,14 +77,12 @@ public class testing {
                 writer.write(dict.get(i).toString());
                 writer.newLine();
             }
-
             writer.close();
-
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
     }
-
 
     public static boolean sortList(String inputvalue, List list)  {
         {
@@ -102,7 +92,8 @@ public class testing {
                 if (list.get(i).toString().toLowerCase().compareTo(inputvalue.toLowerCase()) > 0) {
                     if (i == 0) {
                         list.add(0, inputvalue);
-                    } else {
+                    }
+                    else {
                         list.add(i, inputvalue);
                     }
                     retorno = true;
@@ -124,12 +115,13 @@ public class testing {
 
         } else {
 
-            for (int s = 0; s < comm.length ; s++){
+            for (int i = 0; i < comm.length ; i++){
                 try {
-                    if (Integer.parseInt(comm[s]) == -1) {
+                    if (Integer.parseInt(comm[i]) == -1) {
 
                         BufferedReader readsortedus = new BufferedReader(new FileReader("SortDictus.txt"));
                         BufferedReader readunsortchelu = new BufferedReader(new FileReader("sortedDictTest.txt"));
+
                         String firstl = readsortedus.readLine();
                         String secondl = readunsortchelu.readLine();
 
@@ -140,7 +132,8 @@ public class testing {
                             if (firstl == null || secondl == null) {
                                 is = false;
                                 break;
-                            } else if (!firstl.equalsIgnoreCase(secondl)) {
+                            }
+                            else if (!firstl.equalsIgnoreCase(secondl)) {
                                 is = false;
                                 break;
                             }
@@ -152,18 +145,21 @@ public class testing {
 
                         if (is) {
                             System.out.println("Files are exactly the same! :)");
-                        } else {
+                        }
+                        else {
                             System.out.println("The files are not the same. SortDictus has " + " ( "+ firstl + " )"  + " and sortedDictTest has " + "( " + secondl+ " )" + " in the line " + lineNum + ":(" );
                         }
                         readsortedus.close();
                         readunsortchelu.close();
-                    } else {
-                        System.out.println(dict.get(Integer.parseInt(comm[s])));
+                    }
+                    else {
+                        System.out.println(dict.get(Integer.parseInt(comm[i])));
                     }
 
-                } catch (IOException e) {
+                }
+                catch (IOException e) {
                     int index = 0;
-                    while (!dict.get(index).toString().equalsIgnoreCase(comm[s])) {
+                    while (!dict.get(index).toString().equalsIgnoreCase(comm[i])) {
                         index++;
 
                         if (index > dict.size()) {
