@@ -93,7 +93,7 @@ public class linkedList {
     {
         BufferedWriter writer;
         try {
-            writer = new BufferedWriter(new FileWriter("prueba.txt"));
+            writer = new BufferedWriter(new FileWriter("SortDictus.txt"));
             while (headref != null) {
                 writer.write(headref.val);
                 writer.newLine();
