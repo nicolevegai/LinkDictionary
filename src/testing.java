@@ -140,7 +140,7 @@ public class testing {
                             if (firstl == null || secondl == null) {
                                 is = false;
                                 break;
-                            } else if (firstl.equalsIgnoreCase(secondl)) {
+                            } else if (!firstl.equalsIgnoreCase(secondl)) {
                                 is = false;
                                 break;
                             }
@@ -151,9 +151,9 @@ public class testing {
                         }
 
                         if (is) {
-                            System.out.println("Files are exactly the same!.");
+                            System.out.println("Files are exactly the same! :)");
                         } else {
-                            System.out.println("The files are not the same. SortDictus has " + firstl + " and sortedDictTest has " + secondl + " in the line " + lineNum + ":(" );
+                            System.out.println("The files are not the same. SortDictus has " + " ( "+ firstl + " )"  + " and sortedDictTest has " + "( " + secondl+ " )" + " in the line " + lineNum + ":(" );
                         }
                         readsortedus.close();
                         readunsortchelu.close();
