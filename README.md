@@ -3,7 +3,7 @@
     Pair Work made by: Juan Felipe Gonzalez and Nicole Vega 
     
 
-This branch is the testing of our LinkDictionary program. Our goal is to find inefficienncies in the code to improve it. And then test how our program runs with 
+This branch is the testing of our LinkDictionary program. Our goal is to find inefficienncies in the code to improve it. And then test how our program runs with the new text files when the user inputs -1 and to see if the file generated with our algorithm sorts the program in a way that the words are in the same position as in sortedDictTest.txt. 
 
 ## Requisites:
 
@@ -41,8 +41,10 @@ This branch is the testing of our LinkDictionary program. Our goal is to find in
   * [.gitignore](https://github.com/nicolevegai/LinkDictionary/blob/test/.gitignore)
   * [LinkDictionary.java](https://github.com/nicolevegai/LinkDictionary/blob/test/src/Linkdictionary.java)
   * [testQuickSort.java](https://github.com/nicolevegai/LinkDictionary/blob/test/src/testQuicksort.java) 
-  * [unsorteddict.txt](https://github.com/nicolevegai/LinkDictionary/blob/test/unsorteddict.txt)
-  * [sorteddict.txt](https://github.com/nicolevegai/LinkDictionary/blob/test/sorteddict.txt)
+  * [unsortedDict.txt](https://github.com/nicolevegai/LinkDictionary/blob/master/unsorteddict.txt) : Unsorted dict for us to sort 
+  * [sortDictUs.txt](https://github.com/nicolevegai/LinkDictionary/blob/test/SortDictus.txt) : File created afer sorting the words. 
+  * [sortedDictTest.txt](https://github.com/nicolevegai/LinkDictionary/blob/test/sortedDictTest.txt) : Sorted dictionary given to us to compare with the sorted file created by us. 
+
  
  ## Our Testing
  
