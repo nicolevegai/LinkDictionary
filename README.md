@@ -160,7 +160,8 @@ The scan console time depends in how much time the user inputs a value for the p
 
 #### Sort list faster
 
-After realizing that what was making inefficient to our code was the sorting method we decided to look for another sorting algorithm. We found that [merge sorting](https://www.geeksforgeeks.org/merge-sort-for-linked-list/) works well with linked lists. 
+After realizing that what was making inefficient to our code was the sorting method we decided to look for another sorting algorithm. We found that [merge sorting](https://www.geeksforgeeks.org/merge-sort-for-linked-list/) works well with linked lists.
+The merge method drastically imporoves the loading times, however it is important to note that it requires big amounts of ram in order to work properly. 
 
 The new time to sort the file is: 
  
