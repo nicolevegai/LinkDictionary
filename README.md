@@ -176,10 +176,19 @@ We realized that we could hold in an array all the arguments that were inputed t
             if (comm.length > 10) {
                 System.out.println("Only up to 10 commands are allowed!");
                 }
-                 else {        
-                        System.out.println(dict.get(Integer.parseInt(comm[i])));
+                 else {
+
+                        if ( i < -1) {
+                            System.out.println("NOT VALID NUMBER!!");
+                        }
+                        else if (i < comm.length){
+                            System.out.println("NOT VALID NUMBER!!");
+                        }
+                        else {
+                            System.out.println(dict.get(Integer.parseInt(comm[i])));
+                        }
                     }
-                    catch (Exception e) {
+                }catch (Exception e) {
                   int index = 0;
                     while (!dict.get(index).toString().equalsIgnoreCase(comm[i])) {
                         index++;
