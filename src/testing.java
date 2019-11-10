@@ -151,7 +151,16 @@ public class testing {
                         readunsortchelu.close();
                     }
                     else {
-                        System.out.println(dict.get(Integer.parseInt(comm[i])));
+
+                        if ( i < -1) {
+                            System.out.println("NOT VALID NUMBER!!");
+                        }
+                        else if (i < comm.length){
+                            System.out.println("NOT VALID NUMBER!!");
+                        }
+                        else {
+                            System.out.println(dict.get(Integer.parseInt(comm[i])));
+                        }
                     }
                 }
                 catch (Exception e) {
