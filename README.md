@@ -159,9 +159,12 @@ The scan console time depends in how much time the user inputs a value for the p
 #### Sort list faster
 
 After realizing that what was making inefficient to our code was the sorting method we decided to look for another sorting algorithm. We found that [merge sorting](https://www.geeksforgeeks.org/merge-sort-for-linked-list/) works well with linked lists. 
-The merge method drastically improved performance times, however it is important to note that without allocating large amounts of ram to the JVM it will not work and most likely throw an exception. 
+The merge method drastically improved performance times, however it is important to note that without allocating large amounts of ram to the JVM it will not work and most likely throw an exception. To check this changes go to the final branch.
+[Check the code here!](https://github.com/nicolevegai/LinkDictionary/blob/final/src/linkedList.java)
 
-To check how we applied merge sorting go to final branch in the [Linkedlist class](https://github.com/nicolevegai/LinkDictionary/blob/final/src/linkedList.java)
+With this our code improved a lot reducing the time from 3 minutes to 40ms 
+
+
 #### Scanned Arguments 
 
 We realized that we could hold in an array all the arguments that were inputed to print them all at the same time instead of doing it one per one. To do this we edited the method scanConsole() so it accepted a minimum of 0 and a maximum of 10 arguments and printed their index where a word was found or the index of word at the same time. 
@@ -190,6 +193,9 @@ We realized that we could hold in an array all the arguments that were inputed t
 #### Screenshot of Outputs
 
 ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/74614874_10215436107358438_5641640779693686784_n.jpg?_nc_cat=110&_nc_oc=AQmyfNPxPUO4sQaixjYBhD9M1lzDcYSXeOBNIJUuuJnvWIerIH4gHS2xQU9EU_bL0ec&_nc_ht=scontent-mad1-1.xx&oh=3249eca5eefa0e88347b04cc9c58bd6e&oe=5E620D0A)
+
+**With new sorting method done in only 40ms!!!:**
+![image](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/72939075_10215438319093730_8986463603607470080_n.jpg?_nc_cat=110&_nc_oc=AQlFu2nPchAFFYYQJhuRhGIgpT1vEhw1d5DHQMccTNsm5qZWEwU2A3x3AU6NhZ8KoeI&_nc_ht=scontent-mad1-1.xx&oh=6d3b26d61493256ff54b43f135674cb1&oe=5E50088C)
 
 
 
@@ -241,6 +247,9 @@ To do the Verification Test in the scanConsole() method we added an if clause we
      
   #### Verification Test Screenshot 
    ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/74675005_10215436153679596_2565502996624441344_n.jpg?_nc_cat=104&_nc_oc=AQkn6ipgKM24JWeGX3oj4U_wzr5OqX8AxnuKfq8TsIDUQG41gYC0waMDl6tMP9mj5bs&_nc_ht=scontent-mad1-1.xx&oh=9948e0f201335512bc71786f8b5f3d17&oe=5E430903)
+   
+  **With new sorting method done in only 41ms!!!:**
+  ![img](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/75402096_10215438318453714_2594616093137960960_n.jpg?_nc_cat=111&_nc_oc=AQkU2il4wy9Bv1eBisWrJ93mJBbHCUfCvkkgjMmy_uQguEC1ls3_NW-ciRWlWXJmsI4&_nc_ht=scontent-mad1-1.xx&oh=0aa455307ac48951f8cbb0def18267ef&oe=5E4617E4) 
    
  #### Verification of words 
  Here we can see that the words in the file SortDictus.txt and sortedDictTest.txt are in the same position
