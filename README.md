@@ -86,6 +86,8 @@ In this table, we can observe the time it takes to sort up to 10000 words. As th
 
 
 ##### read(dict)
+
+For the read method 
         
       read(dict);
             endTime = (System.currentTimeMillis() - startTime);
@@ -107,6 +109,8 @@ In this table, we can observe the time it takes to sort up to 10000 words. As th
 | Maximum    |   205895 |
 | Minimum   |  183752  |
             
+ ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/75594548_10215436820296261_46527028530249728_n.jpg?_nc_cat=102&_nc_oc=AQkuxf_1i7aKH27YHmeoHntlTxea876BlYwjw5nm2LAcZiPvoYmE_6fG2EFVU91kMvI&_nc_ht=scontent-mad1-1.xx&oh=ff4e1d61fd5e4081b2df418ea0f56c6f&oe=5E419D41)    
+ 
 ##### writeFile(dict)
         
         writeFile(dict);
@@ -191,7 +195,7 @@ We realized that we could hold in an array all the arguments that were inputed t
                 
 #### Screenshot of Outputs
 
-![imagen](https://web.whatsapp.com/819e4b3d-aed8-4d80-90b6-ce7b3b32a885)
+![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/74614874_10215436107358438_5641640779693686784_n.jpg?_nc_cat=110&_nc_oc=AQmyfNPxPUO4sQaixjYBhD9M1lzDcYSXeOBNIJUuuJnvWIerIH4gHS2xQU9EU_bL0ec&_nc_ht=scontent-mad1-1.xx&oh=3249eca5eefa0e88347b04cc9c58bd6e&oe=5E620D0A)
 
 
 
@@ -240,7 +244,7 @@ To do the Verification Test in the scanConsole() method we added an if clause we
               }                
      
   #### Verification Test Screenshot 
-   ![imagen](https://web.whatsapp.com/3884a845-66af-4bfe-bb58-9328216deb0e)
+   ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/74675005_10215436153679596_2565502996624441344_n.jpg?_nc_cat=104&_nc_oc=AQkn6ipgKM24JWeGX3oj4U_wzr5OqX8AxnuKfq8TsIDUQG41gYC0waMDl6tMP9mj5bs&_nc_ht=scontent-mad1-1.xx&oh=9948e0f201335512bc71786f8b5f3d17&oe=5E430903)
            
             
 
