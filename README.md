@@ -159,7 +159,7 @@ The scan console time depends in how much time the user inputs a value for the p
 #### Sort list faster
 
 After realizing that what was making inefficient to our code was the sorting method we decided to look for another sorting algorithm. We found that [merge sorting](https://www.geeksforgeeks.org/merge-sort-for-linked-list/) works well with linked lists. 
-The merge method drastically improved performance times, however it is important to note that without allocating large amounts of ram to the JVM it will not work and most likely throw an exception. To check this changes go to the final branch.
+The merge method drastically improved performance times, however it is important to note that without allocating large amounts of ram to the JVM it will not work and most likely throw an exception.  
 [Check the code here!](https://github.com/nicolevegai/LinkDictionary/blob/final/src/linkedList.java)
 
 With this our code improved a lot reducing the time from 3 minutes to 40ms 
@@ -176,10 +176,19 @@ We realized that we could hold in an array all the arguments that were inputed t
             if (comm.length > 10) {
                 System.out.println("Only up to 10 commands are allowed!");
                 }
-                 else {        
-                        System.out.println(dict.get(Integer.parseInt(comm[i])));
+                 else {
+
+                        if ( i < -1) {
+                            System.out.println("NOT VALID NUMBER!!");
+                        }
+                        else if (i < comm.length){
+                            System.out.println("NOT VALID NUMBER!!");
+                        }
+                        else {
+                            System.out.println(dict.get(Integer.parseInt(comm[i])));
+                        }
                     }
-                    catch (Exception e) {
+                }catch (Exception e) {
                   int index = 0;
                     while (!dict.get(index).toString().equalsIgnoreCase(comm[i])) {
                         index++;
@@ -202,7 +211,7 @@ We realized that we could hold in an array all the arguments that were inputed t
 
 ### Verification Test 
 
-To do the Verification Test in the scanConsole() method we added an if clause were if -1 was inputed then the test started. The test consisted in checking line per line (10,000 words) if the words in the file SortDictus.txt (created by us) were in the same position as in sortedDictTest.txt. 
+To do the Verification Test in the scanConsole() method we added an if clause were if -1 was inputed then the test started. The test consisted in checking line per line (10,000 words) if the words in the file SortDictus.txt (created by us) were in the same position as in sortedDictTest.txt. We can not pass the word test to start testing because if we do this the program will look for the word test in the dictionary. 
 
        for (int i = 0; i < comm.length ; i++){
                 try {
@@ -255,7 +264,8 @@ To do the Verification Test in the scanConsole() method we added an if clause we
  Here we can see that the words in the file SortDictus.txt and sortedDictTest.txt are in the same position
  ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/72159719_10215437510513516_6590964350385651712_n.jpg?_nc_cat=103&_nc_oc=AQlsEmX1RQS0uIGI0RU1dOfeARObmPambGLNVe-t6diuS5Qdvs_b588S8MUKpWpjc9E&_nc_ht=scontent-mad1-1.xx&oh=b51521b0f5cb853483b0f4cf48e1aee1&oe=5E5032B4)
            
-
+#### important
+We verified this code with negative numbers, numbers bigger than the ones in the dict, with words that were not holded in the dict, etc and it worked :)
 #### To contact the collaborators please write us an email
     mvega.ieu2017@student.ie.edu
     jgonzalez.ieu2017@student.ie.edu
