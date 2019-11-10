@@ -101,11 +101,11 @@ In this table, we can observe the time it takes to sort up to 10000 words. As th
 | 6     |   186344 |
 | 7     |  203919  |
 | 8     |   197364 |
-| 9     |    |
-| 10    |    |
-| Average   |    |
-| Maximum    |    |
-| Minimum   |    |
+| 9     |   200170 |
+| 10    |  205895  |
+| Average   |   193370,7 |
+| Maximum    |   205895 |
+| Minimum   |  183752  |
             
 ##### writeFile(dict)
         
@@ -123,11 +123,11 @@ In this table, we can observe the time it takes to sort up to 10000 words. As th
 | 6     | 186495  |
 | 7     |  204076 |
 | 8     |   197510 |
-| 9     |    |
-| 10    |    |
-| Average   |    |
-| Maximum    |    |
-| Minimum   |    |
+| 9     |  200341  |
+| 10    |   206058 |
+| Average   |  193528,1  |
+| Maximum    |  206058  |
+| Minimum   |  183908 |
             
  
 ##### scanConsole()
@@ -149,11 +149,11 @@ The scan console time depends in how much time the user inputs a value for the p
 | 6     |  188438 |
 | 7     |   225179 |
 | 8     |   219338 |
-| 9     |    |
-| 10    |    |
-| Average   |    |
-| Maximum    |    |
-| Minimum   |    |
+| 9     |   221024 |
+| 10    |   210181 |
+| Average   |  203144,7778  |
+| Maximum    |  225179  |
+| Minimum   |  187006   |
             
 
 ### Improvements
@@ -191,7 +191,7 @@ We realized that we could hold in an array all the arguments that were inputed t
                 
 #### Screenshot of Outputs
 
-![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/74614874_10215436107358438_5641640779693686784_n.jpg?_nc_cat=110&_nc_oc=AQmyfNPxPUO4sQaixjYBhD9M1lzDcYSXeOBNIJUuuJnvWIerIH4gHS2xQU9EU_bL0ec&_nc_ht=scontent-mad1-1.xx&oh=3249eca5eefa0e88347b04cc9c58bd6e&oe=5E620D0A )
+![imagen](blob:https://web.whatsapp.com/819e4b3d-aed8-4d80-90b6-ce7b3b32a885 )
 
 
 
@@ -240,7 +240,7 @@ To do the Verification Test in the scanConsole() method we added an if clause we
               }                
      
   #### Verification Test Screenshot 
-   ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/74675005_10215436153679596_2565502996624441344_n.jpg?_nc_cat=104&_nc_oc=AQkn6ipgKM24JWeGX3oj4U_wzr5OqX8AxnuKfq8TsIDUQG41gYC0waMDl6tMP9mj5bs&_nc_ht=scontent-mad1-1.xx&oh=9948e0f201335512bc71786f8b5f3d17&oe=5E430903)
+   ![imagen](blob:https://web.whatsapp.com/68ea5960-f169-4675-8372-60103a785720)
            
             
 
