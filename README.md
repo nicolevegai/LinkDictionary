@@ -55,7 +55,7 @@ This branch is the testing of our LinkDictionary program. Our goal is to find in
  
 **sortList()**
 
-We found that the most inefficient part of our code is the sortList method. We realized that using CurrentTimeMills() method we printed how much it took for 1000 words to be sorted. And the times where increasing with each iteration. For 10000 words the time elapsed is 2:03 minutes.  
+We found that the most inefficient part of our code is the sortList method. We realized that using CurrentTimeMills() method we printed how much it took for 1000 words to be sorted. And the times where increasing with each iteration. For 10000 words the time elapsed is 3:38 minutes.  
     
      counter++;
                 if(counter > 1000){
@@ -65,7 +65,7 @@ We found that the most inefficient part of our code is the sortList method. We r
                     counter =0;
                 }
  
-| Iteration |  Number of Words   |  Miliseconds | Seconds|
+| Iteration |  Number of Words   |  Miliseconds | Seconds| 
 |------------|:-----------------:|-------------:|---------:|
 | 1          |  1000             | 194          |0|
 | 2          |  2000             | 1503         |1|
@@ -83,7 +83,6 @@ In this table, we can observe the time it takes to sort up to 10000 words. As th
 
 ![graph](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/74911445_10215327754609687_4745440164837326848_n.jpg?_nc_cat=111&_nc_oc=AQmINfYRU50j1KjxSYQYizQRFwtkUwo25s4F1weLTbdY9kJUpGtlmpwAxgDisKo_sj4&_nc_ht=scontent-mad1-1.xx&oh=18514017dd7700126c97d1e68801abb4&oe=5E19D30E)
 
-After realizing that what was maing inefficient to our code was the sorting method we decided to look for another sorting algorithm. We found that [merge sorting](https://www.geeksforgeeks.org/merge-sort-for-linked-list/) works well with linked lists. 
 
 
 ##### read(dict)
@@ -94,15 +93,15 @@ After realizing that what was maing inefficient to our code was the sorting meth
             
 | Number of repetitions of method   |  Time elapsed in ms| 
 |------------|:-----------------:|
-| 1     |   288310 | 
+| 1     |    | 
 | 2     |   186160 |
 | 3     |   187814 |
 | 4     |   183752 |
 | 5     |   189252  |
 | 6     |   186344 |
 | 7     |  203919  |
-| 8     |    |
-| 9     |    |
+| 8     |   197364 |
+| 9     |   199172 |
 | 10    |    |
 | Average   |    |
 | Maximum    |    |
@@ -116,15 +115,15 @@ After realizing that what was maing inefficient to our code was the sorting meth
             
 | Number of repetitions of method   |  Time elapsed in ms| 
 |------------|:-----------------:|
-| 1     |  288479  | 
+| 1     |    | 
 | 2     |  186317  |
 | 3     |  187971  |
 | 4     |  183908  |
 | 5     |   189414  |
 | 6     | 186495  |
 | 7     |  204076 |
-| 8     |    |
-| 9     |    |
+| 8     |   197510 |
+| 9     |   199327 |
 | 10    |    |
 | Average   |    |
 | Maximum    |    |
@@ -133,6 +132,8 @@ After realizing that what was maing inefficient to our code was the sorting meth
  
 ##### scanConsole()
 
+The scan console time depends in how much time the user inputs a value for the program to print. To test this we input an argument as soon as "Please input a minimum of 0 and a maximum of 10 commands args separated by a space to find a word or index" adding the same number of inputs ( 1 2 ).  
+
     scanConsole(dict);
             endTime = (System.currentTimeMillis() - startTime);
             System.out.println("Console scanned in: " + endTime + " ms"); //yaaa
@@ -140,14 +141,14 @@ After realizing that what was maing inefficient to our code was the sorting meth
 
  | Number of repetitions of method   |  Time elapsed in ms| 
 |------------|:-----------------:|
-| 1     |   305544 | 
+| 1     |    | 
 | 2     |   191291 |
 | 3     |   191298 |
 | 4     |   187006 |
 | 5     |  194548  |
 | 6     |  188438 |
 | 7     |   225179 |
-| 8     |    |
+| 8     |   219338 |
 | 9     |    |
 | 10    |    |
 | Average   |    |
@@ -158,11 +159,83 @@ After realizing that what was maing inefficient to our code was the sorting meth
 ### Improvements
 
 #### Sort list faster
+
+After realizing that what was making inefficient to our code was the sorting method we decided to look for another sorting algorithm. We found that [merge sorting](https://www.geeksforgeeks.org/merge-sort-for-linked-list/) works well with linked lists. 
+
+The new time to sort the file is: 
  
- 
- 
+#### Scanned Arguments 
+
+We realized that we could hold in an array all the arguments that were inputed to print them all at the same time instead of doing it one per one. To do this we edited the method scanConsole() so it accepted a minimum of 0 and a maximum of 10 arguments and printed their index where a word was found or the index of word at the same time. 
+
+     Scanner scan = new Scanner(System.in);
+            System.out.println("Please input a minimum of 0 and a maximum of 10 commands args separated by a space to find a word or index");
+            String args = scan.nextLine();
+            String[] comm = args.split(" ");
+            if (comm.length > 10) {
+                System.out.println("Only up to 10 commands are allowed!");
+                }
+                 else {        
+                        System.out.println(dict.get(Integer.parseInt(comm[i])));
+                    }
+                    catch (Exception e) {
+                  int index = 0;
+                    while (!dict.get(index).toString().equalsIgnoreCase(comm[i])) {
+                        index++;
+                        if (index > dict.size()) {
+                            System.out.println("-1");// si no existe esa palabra
+                        }
+                    }
+                    System.out.println(index);
+                }
+                
+                
 
 ### Verification Test 
+
+To do the Verification Test in the scanConsole() method we added an if clause were if -1 was inputed then the test started. The test consisted in checking line per line if the words in the file SortDictus.txt (created by us) were in the same position as in sortedDictTest.txt.
+
+       for (int i = 0; i < comm.length ; i++){
+                try {
+                    if (Integer.parseInt(comm[i]) == -1) {
+
+                        BufferedReader readsortedus = new BufferedReader(new FileReader("SortDictus.txt"));
+                        BufferedReader readunsortchelu = new BufferedReader(new FileReader("sortedDictTest.txt"));
+
+                        String firstl = readsortedus.readLine();
+                        String secondl = readunsortchelu.readLine();
+
+                        boolean is = true;
+                        int lineNum = 1;
+
+                        while (firstl != null || secondl != null) {
+                            if (firstl == null || secondl == null) {
+                                is = false;
+                                break;
+                            }
+                            else if (!firstl.equalsIgnoreCase(secondl)) {
+                                is = false;
+                                break;
+                            }
+
+                            firstl = readsortedus.readLine();
+                            secondl = readunsortchelu.readLine();
+                            lineNum++;
+                        }
+
+                        if (is) {
+                            System.out.println("Files are exactly the same! :)");
+                        }
+                        else {
+                            System.out.println("The files are not the same. SortDictus has " + " ( "+ firstl + " )"  + " and sortedDictTest has " + "( " + secondl+ " )" + " in the line " + lineNum + ":(" );
+                        }
+                        readsortedus.close();
+                        readunsortchelu.close();
+                    }
+              }                
+              
+              
+            
 
 Add code that performs a verification test when the value “-1” is passed to the program as an argument
      * Why don’t we choose the word “test” as an argument to activate the test?
