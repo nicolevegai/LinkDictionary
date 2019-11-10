@@ -162,6 +162,8 @@ After realizing that what was making inefficient to our code was the sorting met
 The merge method drastically improved performance times, however it is important to note that without allocating large amounts of ram to the JVM it will not work and most likely throw an exception.  
 [Check the code here!](https://github.com/nicolevegai/LinkDictionary/blob/final/src/linkedList.java)
 
+With this our code improved a lot reducing the time from 3 minutes to 40ms 
+
 
 #### Scanned Arguments 
 
@@ -192,12 +194,15 @@ We realized that we could hold in an array all the arguments that were inputed t
 
 ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/74614874_10215436107358438_5641640779693686784_n.jpg?_nc_cat=110&_nc_oc=AQmyfNPxPUO4sQaixjYBhD9M1lzDcYSXeOBNIJUuuJnvWIerIH4gHS2xQU9EU_bL0ec&_nc_ht=scontent-mad1-1.xx&oh=3249eca5eefa0e88347b04cc9c58bd6e&oe=5E620D0A)
 
+**With new sorting method done in only 40ms!!!:**
+![image](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/72939075_10215438319093730_8986463603607470080_n.jpg?_nc_cat=110&_nc_oc=AQlFu2nPchAFFYYQJhuRhGIgpT1vEhw1d5DHQMccTNsm5qZWEwU2A3x3AU6NhZ8KoeI&_nc_ht=scontent-mad1-1.xx&oh=6d3b26d61493256ff54b43f135674cb1&oe=5E50088C)
+
 
 
 
 ### Verification Test 
 
-To do the Verification Test in the scanConsole() method we added an if clause were if -1 was inputed then the test started. The test consisted in checking line per line (10,000 words) if the words in the file SortDictus.txt (created by us) were in the same position as in sortedDictTest.txt. 
+To do the Verification Test in the scanConsole() method we added an if clause were if -1 was inputed then the test started. The test consisted in checking line per line (10,000 words) if the words in the file SortDictus.txt (created by us) were in the same position as in sortedDictTest.txt. We can not pass the word test to start testing because if we do this the program will look for the word test in the dictionary. 
 
        for (int i = 0; i < comm.length ; i++){
                 try {
@@ -243,11 +248,15 @@ To do the Verification Test in the scanConsole() method we added an if clause we
   #### Verification Test Screenshot 
    ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/74675005_10215436153679596_2565502996624441344_n.jpg?_nc_cat=104&_nc_oc=AQkn6ipgKM24JWeGX3oj4U_wzr5OqX8AxnuKfq8TsIDUQG41gYC0waMDl6tMP9mj5bs&_nc_ht=scontent-mad1-1.xx&oh=9948e0f201335512bc71786f8b5f3d17&oe=5E430903)
    
+  **With new sorting method done in only 41ms!!!:**
+  ![img](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/75402096_10215438318453714_2594616093137960960_n.jpg?_nc_cat=111&_nc_oc=AQkU2il4wy9Bv1eBisWrJ93mJBbHCUfCvkkgjMmy_uQguEC1ls3_NW-ciRWlWXJmsI4&_nc_ht=scontent-mad1-1.xx&oh=0aa455307ac48951f8cbb0def18267ef&oe=5E4617E4) 
+   
  #### Verification of words 
  Here we can see that the words in the file SortDictus.txt and sortedDictTest.txt are in the same position
  ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/72159719_10215437510513516_6590964350385651712_n.jpg?_nc_cat=103&_nc_oc=AQlsEmX1RQS0uIGI0RU1dOfeARObmPambGLNVe-t6diuS5Qdvs_b588S8MUKpWpjc9E&_nc_ht=scontent-mad1-1.xx&oh=b51521b0f5cb853483b0f4cf48e1aee1&oe=5E5032B4)
            
-
+#### important
+We verified this code with negative numbers, numbers bigger than the ones in the dict, with words that were not holded in the dict, etc and it worked :)
 #### To contact the collaborators please write us an email
     mvega.ieu2017@student.ie.edu
     jgonzalez.ieu2017@student.ie.edu
