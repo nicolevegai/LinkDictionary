@@ -118,7 +118,9 @@ public class linkedList {
         if (comm.length > 10) {
             System.out.println("Only up to 10 commands are allowed!");
 
-        } else {
+
+        }
+        else {
 
             for (int i = 0; i < comm.length ; i++){
                 try {
@@ -161,7 +163,16 @@ public class linkedList {
                         readunsortchelu.close();
                     }
                     else {
-                        System.out.println(dict.get(Integer.parseInt(comm[i])));
+
+                        if ( i < -1) {
+                            System.out.println("NOT VALID NUMBER!!");
+                        }
+                        else if (i < comm.length){
+                            System.out.println("NOT VALID NUMBER!!");
+                        }
+                        else {
+                            System.out.println(dict.get(Integer.parseInt(comm[i])));
+                        }
                     }
                 }
                 catch (Exception e) {
@@ -171,6 +182,8 @@ public class linkedList {
                         if (index > dict.size()) {
                             System.out.println("-1");// si no existe esa palabra
                         }
+
+
                     }
                     System.out.println(index);
                 }
