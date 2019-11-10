@@ -112,45 +112,73 @@ public class linkedList {
     public static void scanConsole(LinkedList dict) {
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("To find a word position input: word  (The word you want to find),"
-                + "To find a word at an index input: index (the index you want to find) or exit to finish looking.  ");
-        for (int args = 0; args < 10; args++) { // hasta 10 args
+        System.out.println("Please input a minimum of 0 and a maximum of 10 commands args separated by a space to find a word or index");
+        String args = scan.nextLine();
+        String[] comm = args.split(" ");
+        if (comm.length > 10) {
+            System.out.println("Only up to 10 commands are allowed!");
+
+        } else {
+
+            for (int i = 0; i < comm.length ; i++){
+                try {
+                    if (Integer.parseInt(comm[i]) == -1) {
+
+                        BufferedReader readsortedus = new BufferedReader(new FileReader("SortDictus.txt"));
+                        BufferedReader readunsortchelu = new BufferedReader(new FileReader("sortedDictTest.txt"));
+
+                        String firstl = readsortedus.readLine();
+                        String secondl = readunsortchelu.readLine();
+
+                        boolean is = true;
+                        int lineNum = 1;
 
 
-            String command = scan.nextLine();
-            String[] tokens = command.split(" ");
+                        while (firstl != null || secondl != null) {
+                            if (firstl == null || secondl == null) {
+                                is = false;
+                                break;
+                            }
+                            else if (!firstl.equalsIgnoreCase(secondl)) {
+                                is = false;
+                                break;
+                            }
 
-            if (tokens[0].equalsIgnoreCase("index")) {
-                int index = Integer.parseInt(tokens[1]);
-                if (index < 0) {
-                    System.out.println("Please input only positive numbers");
-                } else {
-                    if (index > dict.size()) {
-                        System.out.println("-1");// si no existe ese numero
+                            firstl = readsortedus.readLine();
+                            secondl = readunsortchelu.readLine();
+                            lineNum++;
+                        }
 
-                    } else {
-                        System.out.println(dict.get(index-1));
+                        if (is) {
+
+                            System.out.println("Files are exactly the same! :)");
+
+                        }
+                        else {
+                            System.out.println("The files are not the same. SortDictus has " + " ( "+ firstl + " )"  + " and sortedDictTest has " + "( " + secondl+ " )" + " in the line " + lineNum + ":(" );
+                        }
+                        readsortedus.close();
+                        readunsortchelu.close();
+                    }
+                    else {
+                        System.out.println(dict.get(Integer.parseInt(comm[i])));
                     }
                 }
-
-            } else if (tokens[0].equalsIgnoreCase("word")) {
-                int index = 0;
-                while (!dict.get(index).toString().equalsIgnoreCase(tokens[1])) {
-                    index++;
-                    if (index > dict.size()) {
-                        System.out.println("-1");// si no existe esa palabra
+                catch (Exception e) {
+                    int index = 0;
+                    while (!dict.get(index).toString().equalsIgnoreCase(comm[i])) {
+                        index++;
+                        if (index > dict.size()) {
+                            System.out.println("-1");// si no existe esa palabra
+                        }
                     }
+                    System.out.println(index);
                 }
-                System.out.println(index+1);
-
-            } else if (tokens[0].equalsIgnoreCase("-1")) {
-            } else if (tokens[0].equalsIgnoreCase("exit")) {
-                break;
             }
-            scan.close();
-
         }
     }
+
+
     public static void main(String[] args)
     {
         LinkedList<String> dict = new LinkedList<String>();
