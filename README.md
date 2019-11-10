@@ -98,7 +98,7 @@ After realizing that what was maing inefficient to our code was the sorting meth
 | 4     |   183752 |
 | 5     |   189252  |
 | 6     |   186344 |
-| 7     |    |
+| 7     |  203919  |
 | 8     |    |
 | 9     |    |
 | 10    |    |
@@ -120,7 +120,7 @@ After realizing that what was maing inefficient to our code was the sorting meth
 | 4     |  183908  |
 | 5     |   189414  |
 | 6     | 186495  |
-| 7     |   |
+| 7     |  204076 |
 | 8     |    |
 | 9     |    |
 | 10    |    |
@@ -144,7 +144,7 @@ After realizing that what was maing inefficient to our code was the sorting meth
 | 4     |   187006 |
 | 5     |  194548  |
 | 6     |  188438 |
-| 7     |    |
+| 7     |   225179 |
 | 8     |    |
 | 9     |    |
 | 10    |    |
