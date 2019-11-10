@@ -3,7 +3,7 @@
     Pair Work made by: Juan Felipe Gonzalez and Nicole Vega 
     
 
-This branch is the testing of our LinkDictionary program. Our goal is to find inefficienncies in the code to improve it. And then test how our program runs with ...... 
+This branch is the testing of our LinkDictionary program. Our goal is to find inefficienncies in the code to improve it. And then test how our program runs with 
 
 ## Requisites:
 
@@ -13,7 +13,7 @@ This branch is the testing of our LinkDictionary program. Our goal is to find in
     
     **To deliver:**
     * Place several timers to control what time it takes to do certain tasks. Do printouts to see that info on the console
-    * Sincesometaskstakeavariableamountoftime,calculatetheaverage,maximumandminimumof certain tasks to have a better understanding of the limitations of our algorithms 
+    * Since some tasks take a variable amount of time, calculate the average, maximum and minimum of certain tasks to have a better understanding of the limitations of our algorithms 
     * Find bottlenecks and fix them 
                                        
 #### Verification test
@@ -45,9 +45,15 @@ This branch is the testing of our LinkDictionary program. Our goal is to find in
   * [sorteddict.txt](https://github.com/nicolevegai/LinkDictionary/blob/test/sorteddict.txt)
  
  ## Our Testing
- ### Finding Inefficiencies
  
- We found that the most inefficient part of our code is the sortList method. We realized that using CurrentTimeMills() method we printed how much it took for 1000 words to be sorted. And the times where increasing with each iteration. 
+ ### Performance test
+ 
+ #### Placing Timers to find Inneficiencies 
+ We placed timers to see in how much different methods where finished. 
+ 
+**sortList()**
+
+We found that the most inefficient part of our code is the sortList method. We realized that using CurrentTimeMills() method we printed how much it took for 1000 words to be sorted. And the times where increasing with each iteration. For 10000 words the time elapsed is 2:03 minutes.  
     
      counter++;
                 if(counter > 1000){
@@ -56,7 +62,6 @@ This branch is the testing of our LinkDictionary program. Our goal is to find in
                     System.out.println( totalTime + " miliseconds elapsed or " + totalTime/1000+ " seconds");
                     counter =0;
                 }
- 
  
 | Iteration |  Number of Words   |  Miliseconds | Seconds|
 |------------|:-----------------:|-------------:|---------:|
@@ -78,9 +83,89 @@ In this table, we can observe the time it takes to sort up to 10000 words. As th
 
 After realizing that what was maing inefficient to our code was the sorting method we decided to look for another sorting algorithm. We found that [merge sorting](https://www.geeksforgeeks.org/merge-sort-for-linked-list/) works well with linked lists. 
 
+
+##### read(dict)
+        
+      read(dict);
+            endTime = (System.currentTimeMillis() - startTime);
+            System.out.println("file read in: " + endTime + " ms");
+            
+| Number of repetitions of method   |  Time elapsed in ms| 
+|------------|:-----------------:|
+| 1     |   288310 | 
+| 2     |   186160 |
+| 3     |   187814 |
+| 4     |   183752 |
+| 5     |   189252  |
+| 6     |   186344 |
+| 7     |  203919  |
+| 8     |    |
+| 9     |    |
+| 10    |    |
+| Average   |    |
+| Maximum    |    |
+| Minimum   |    |
+            
+##### writeFile(dict)
+        
+        writeFile(dict);
+            endTime = (System.currentTimeMillis() - startTime);
+            System.out.println("New file written in: " + endTime + " ms"); 
+            
+| Number of repetitions of method   |  Time elapsed in ms| 
+|------------|:-----------------:|
+| 1     |  288479  | 
+| 2     |  186317  |
+| 3     |  187971  |
+| 4     |  183908  |
+| 5     |   189414  |
+| 6     | 186495  |
+| 7     |  204076 |
+| 8     |    |
+| 9     |    |
+| 10    |    |
+| Average   |    |
+| Maximum    |    |
+| Minimum   |    |
+            
+ 
+##### scanConsole()
+
+    scanConsole(dict);
+            endTime = (System.currentTimeMillis() - startTime);
+            System.out.println("Console scanned in: " + endTime + " ms"); //yaaa
+ 
+
+ | Number of repetitions of method   |  Time elapsed in ms| 
+|------------|:-----------------:|
+| 1     |   305544 | 
+| 2     |   191291 |
+| 3     |   191298 |
+| 4     |   187006 |
+| 5     |  194548  |
+| 6     |  188438 |
+| 7     |   225179 |
+| 8     |    |
+| 9     |    |
+| 10    |    |
+| Average   |    |
+| Maximum    |    |
+| Minimum   |    |
+            
+
 ### Improvements
 
 #### Sort list faster
+ 
+ 
+ 
+
+### Verification Test 
+
+Add code that performs a verification test when the value “-1” is passed to the program as an argument
+     * Why don’t we choose the word “test” as an argument to activate the test?
+     * Check with several words that the position matches
+     * Performs a full test of the 10,000 words
 
 
  
