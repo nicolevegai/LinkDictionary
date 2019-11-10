@@ -159,7 +159,8 @@ The scan console time depends in how much time the user inputs a value for the p
 #### Sort list faster
 
 After realizing that what was making inefficient to our code was the sorting method we decided to look for another sorting algorithm. We found that [merge sorting](https://www.geeksforgeeks.org/merge-sort-for-linked-list/) works well with linked lists. 
-The merge method drastically improved performance times, however it is important to note that without allocating large amounts of ram to the JVM it will not work and most likely throw an exception. 
+The merge method drastically improved performance times, however it is important to note that without allocating large amounts of ram to the JVM it will not work and most likely throw an exception.  
+[Check the code here!](https://github.com/nicolevegai/LinkDictionary/blob/final/src/linkedList.java)
 
 
 #### Scanned Arguments 
