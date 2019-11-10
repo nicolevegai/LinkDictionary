@@ -18,11 +18,11 @@ public class testing {
 
             writeFile(dict);
             endTime = (System.currentTimeMillis() - startTime);
-            System.out.println("New file written in: " + endTime + " ms" + " or " + endTime/1000 + " seconds" + " = " + (endTime/1000)/60 + " minutes ");
+            System.out.println("New file written in: " + endTime + " ms" + " = " + endTime/1000 + " seconds" + " = " + (endTime/1000)/60 + " minutes ");
 
             scanConsole(dict);
             endTime = (System.currentTimeMillis() - startTime);
-            System.out.println("Console scanned in: " + endTime + " ms"+ " or " + endTime/1000 + " seconds" + " = " + (endTime/1000)/60 + " minutes ");
+            System.out.println("Console scanned in: " + endTime + " ms"+ " = " + endTime/1000 + " seconds" + " = " + (endTime/1000)/60 + " minutes ");
         }
         catch (FileNotFoundException | UnsupportedEncodingException e) {
             e.printStackTrace();
