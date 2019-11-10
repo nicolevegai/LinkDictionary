@@ -250,15 +250,6 @@ To do the Verification Test in the scanConsole() method we added an if clause we
   #### Verification Test Screenshot 
    ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/74675005_10215436153679596_2565502996624441344_n.jpg?_nc_cat=104&_nc_oc=AQkn6ipgKM24JWeGX3oj4U_wzr5OqX8AxnuKfq8TsIDUQG41gYC0waMDl6tMP9mj5bs&_nc_ht=scontent-mad1-1.xx&oh=9948e0f201335512bc71786f8b5f3d17&oe=5E430903)
            
-            
-
-Add code that performs a verification test when the value “-1” is passed to the program as an argument
-     * Why don’t we choose the word “test” as an argument to activate the test?
-     * Check with several words that the position matches
-     * Performs a full test of the 10,000 words
-
-
- 
 
 #### To contact the collaborators please write us an email
     mvega.ieu2017@student.ie.edu
