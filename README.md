@@ -159,7 +159,7 @@ The scan console time depends in how much time the user inputs a value for the p
 | 9     |   221024 |
 | 10    |   210181 |
 | Average   |  203144,7778  |
-| Maximum    |  225179  |
+| Maximum   |  225179  |
 | Minimum   |  187006   |
 
 ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/72756057_10215436819576243_4840895074256551936_n.jpg?_nc_cat=107&_nc_oc=AQl12wGr8v77jb4roHPN3f0YVdlb4tW03h9jFYH8CE_cZScFssfGkPTR21uKEa1CPvg&_nc_ht=scontent-mad1-1.xx&oh=5b573717842b671ebf67f243fe7e89c7&oe=5E4F31DF)
@@ -246,9 +246,15 @@ To do the Verification Test in the scanConsole() method we added an if clause we
                         readunsortchelu.close();
                     }
               }                
+   
+
      
   #### Verification Test Screenshot 
    ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/74675005_10215436153679596_2565502996624441344_n.jpg?_nc_cat=104&_nc_oc=AQkn6ipgKM24JWeGX3oj4U_wzr5OqX8AxnuKfq8TsIDUQG41gYC0waMDl6tMP9mj5bs&_nc_ht=scontent-mad1-1.xx&oh=9948e0f201335512bc71786f8b5f3d17&oe=5E430903)
+   
+ #### Verification of words 
+ Here we can see that the words in the file SortDictus.txt and sortedDictTest.txt are in the same position
+ ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/72159719_10215437510513516_6590964350385651712_n.jpg?_nc_cat=103&_nc_oc=AQlsEmX1RQS0uIGI0RU1dOfeARObmPambGLNVe-t6diuS5Qdvs_b588S8MUKpWpjc9E&_nc_ht=scontent-mad1-1.xx&oh=b51521b0f5cb853483b0f4cf48e1aee1&oe=5E5032B4)
            
 
 #### To contact the collaborators please write us an email
