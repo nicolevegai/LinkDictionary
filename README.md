@@ -162,7 +162,7 @@ After realizing that what was making inefficient to our code was the sorting met
 The merge method drastically improved performance times, however it is important to note that without allocating large amounts of ram to the JVM it will not work and most likely throw an exception.  
 [Check the code here!](https://github.com/nicolevegai/LinkDictionary/blob/final/src/linkedList.java)
 
-With this our code improved a lot reducing the time form 3 minutes to 40ms 
+With this our code improved a lot reducing the time from 3 minutes to 40ms 
 
 
 #### Scanned Arguments 
