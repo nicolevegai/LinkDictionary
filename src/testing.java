@@ -153,13 +153,11 @@ public class testing {
                     else {
                         System.out.println(dict.get(Integer.parseInt(comm[i])));
                     }
-
                 }
                 catch (Exception e) {
                     int index = 0;
                     while (!dict.get(index).toString().equalsIgnoreCase(comm[i])) {
                         index++;
-
                         if (index > dict.size()) {
                             System.out.println("-1");// si no existe esa palabra
                         }
@@ -168,6 +166,5 @@ public class testing {
                 }
             }
         }
-
     }
 }
