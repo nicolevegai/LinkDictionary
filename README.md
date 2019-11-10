@@ -132,7 +132,8 @@ For the read method
 | Average   |  193528,1  |
 | Maximum    |  206058  |
 | Minimum   |  183908 |
-            
+  
+   ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/75388387_10215436820256260_8607807862179102720_n.jpg?_nc_cat=103&_nc_oc=AQmSZ2zhfRoZMxgnDeaEr60khocM_FvyBUtV_kVvyHcBlanrb0Mkn5_qd8v76ESLwUo&_nc_ht=scontent-mad1-1.xx&oh=5c8668c7ef5e8a88d98b3a483938b2ac&oe=5E512CAA)
  
 ##### scanConsole()
 
@@ -158,7 +159,8 @@ The scan console time depends in how much time the user inputs a value for the p
 | Average   |  203144,7778  |
 | Maximum    |  225179  |
 | Minimum   |  187006   |
-            
+
+![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/72756057_10215436819576243_4840895074256551936_n.jpg?_nc_cat=107&_nc_oc=AQl12wGr8v77jb4roHPN3f0YVdlb4tW03h9jFYH8CE_cZScFssfGkPTR21uKEa1CPvg&_nc_ht=scontent-mad1-1.xx&oh=5b573717842b671ebf67f243fe7e89c7&oe=5E4F31DF)
 
 ### Improvements
 
