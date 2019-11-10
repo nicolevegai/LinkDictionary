@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class testing {
 
-
     public static void main(String[] args) throws NumberFormatException {
         LinkedList<String> dict = new LinkedList<String>();
 
@@ -15,15 +14,15 @@ public class testing {
 
             read(dict);
             long endTime = (System.currentTimeMillis() - startTime);
-            System.out.println("file read in: " + endTime + " ms");
+            System.out.println("file read in: " + endTime + " ms" + " = " + endTime/1000 + " seconds" + " = " + (endTime/1000)/60 + " minutes " );
 
             writeFile(dict);
             endTime = (System.currentTimeMillis() - startTime);
-            System.out.println("New file written in: " + endTime + " ms"); //yaaa
+            System.out.println("New file written in: " + endTime + " ms" + " or " + endTime/1000 + " seconds" + " = " + (endTime/1000)/60 + " minutes ");
 
             scanConsole(dict);
             endTime = (System.currentTimeMillis() - startTime);
-            System.out.println("Console scanned in: " + endTime + " ms"); //yaaa
+            System.out.println("Console scanned in: " + endTime + " ms"+ " or " + endTime/1000 + " seconds" + " = " + (endTime/1000)/60 + " minutes ");
         }
         catch (FileNotFoundException | UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -59,7 +58,6 @@ public class testing {
                  */
             }
             reader.close();
-//            System.out.println("END!!!");
         }
         catch (IOException e) {
             e.printStackTrace();
@@ -157,7 +155,7 @@ public class testing {
                     }
 
                 }
-                catch (IOException e) {
+                catch (Exception e) {
                     int index = 0;
                     while (!dict.get(index).toString().equalsIgnoreCase(comm[i])) {
                         index++;
