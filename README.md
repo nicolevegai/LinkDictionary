@@ -191,7 +191,7 @@ We realized that we could hold in an array all the arguments that were inputed t
                 
 #### Screenshot of Outputs
 
-![imagen](blob:https://web.whatsapp.com/819e4b3d-aed8-4d80-90b6-ce7b3b32a885 )
+![imagen](https://web.whatsapp.com/819e4b3d-aed8-4d80-90b6-ce7b3b32a885)
 
 
 
@@ -240,7 +240,7 @@ To do the Verification Test in the scanConsole() method we added an if clause we
               }                
      
   #### Verification Test Screenshot 
-   ![imagen](blob:https://web.whatsapp.com/68ea5960-f169-4675-8372-60103a785720)
+   ![imagen](https://web.whatsapp.com/3884a845-66af-4bfe-bb58-9328216deb0e)
            
             
 
