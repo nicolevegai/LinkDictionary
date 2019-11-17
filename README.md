@@ -247,9 +247,9 @@ To do the Verification Test in the scanConsole() method we added an if clause we
  Here we can see that the words in the file SortDictus.txt and sortedDictTest.txt are in the same position
  ![imagen](https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/72159719_10215437510513516_6590964350385651712_n.jpg?_nc_cat=103&_nc_oc=AQlsEmX1RQS0uIGI0RU1dOfeARObmPambGLNVe-t6diuS5Qdvs_b588S8MUKpWpjc9E&_nc_ht=scontent-mad1-1.xx&oh=b51521b0f5cb853483b0f4cf48e1aee1&oe=5E5032B4)
            
-#### Coding Principles
+### Coding Principles
 
-### Coding Principle 1: Meaningful Names
+#### Coding Principle 1: Meaningful Names
 During the testing phase of our project we often used names that we understood and were easy to understand such as “list” or “dict” referring to the LinkedList we had just created and changed it throughout the process. We often changed it to sort through bugs and errors we found. However in order to apply the first coding principle we had to refactor all of these variables and some methods. 
 For example:
    
@@ -259,7 +259,7 @@ Was previously:
     
     LinkedList<String> dict = new LinkedList<String>();
 
-### Coding Principle 2: Keep functions small
+#### Coding Principle 2: Keep functions small
 The functions that we have are all usually quite small, and to the point. A good example of this would be the method that we use to find the middle of the list.
 
     public static node getMiddleOfLinkedList(node head) {
@@ -275,7 +275,7 @@ The functions that we have are all usually quite small, and to the point. A good
         return slow;
     }
 
-### Coding Principle 3: Avoid redundant commenting
+#### Coding Principle 3: Avoid redundant commenting
 Many of the comments we used to indicate the time it took to do a part of the reading, writing, sorting were used to find bottlenecks in the process and for us to be able to improve upon such bottlenecks. There were often comments like
     
     // 4ms
@@ -284,10 +284,10 @@ Or
     // si no existe esa palabra
 These are not needed for the end product and would serve no use for another person reading the code. All of these type of comments were removed. We still decided to keep some of the comments that indicate the purpose of a part of the code, since the logic behind the mergesort is often complicated. 
 
-### Coding Principle 4: Single Responsibility Principle
+#### Coding Principle 4: Single Responsibility Principle
 We didn’t have to change anything here, all of our functions have only one task they have to accomplish. The only thing that we weren’t able to make a single responsibility was the main method. This is because when we were doing the reading of the file and trying to pass each word within a function to the method addValueToLinkedList it didn’t work, because we were trying to make reference to a non-static variable from a non-static context. 
 
-### Coding Principle 5: Don’t Repeat Yourself
+#### Coding Principle 5: Don’t Repeat Yourself
 We have turned all of the things that need to be repeated into methods that we can reuse later. This can be seen in the mergeSortedLists, that compares the nodes and then merges the left and right lists that are already sorted. 
    
     node mergeSortedLists(node a, node b) {
@@ -310,12 +310,12 @@ We have turned all of the things that need to be repeated into methods that we c
         return result;
     }
 
-### Coding Principle 6: Keep your code simple
+#### Coding Principle 6: Keep your code simple
 I feel like most of the code is quite simple, besides the logic that is needed in order to understand the actual merge sorting. Below are the links for the mergesort and the fast and slow pointer to find the middle. 
 https://www.geeksforgeeks.org/merge-sort/
 https://helloacm.com/how-to-compute-the-middle-of-the-linked-list-using-fast-and-slow-pointer/
 
-### Coding Principle 7: You Aint Gonna Need IT
+#### Coding Principle 7: You Aint Gonna Need IT
 Some variables and counters we used to test the speed of the app and the places where it was crashing were no longer needed when we finished. 
 Example:
 
