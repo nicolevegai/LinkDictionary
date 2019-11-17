@@ -6,64 +6,57 @@ public class linkedList {
     node head = null;
     // node a, b;
     static class node {
-        String val;
+        String nodeValue;
         node next;
 
-        public node(String val)
-        {
-            this.val = val;
+        public node(String nodeValue) {
+            this.nodeValue = nodeValue;
         }
     }
-
-    node sortedMerge(node a, node b)
-    {
-        node result = null;
-        /* Base cases */
-        if (a == null)
-            return b;
-        if (b == null)
-            return a;
-
-        /* Pick either a or b, and recur */
-        if (a.val.toString().toLowerCase().compareTo(b.val.toString().toLowerCase()) < 0) {
-            result = a;
-            result.next = sortedMerge(a.next, b);
-        }
-        else {
-            result = b;
-            result.next = sortedMerge(a, b.next);
-        }
-        return result;
-    }
-
-    node mergeSort(node h)
-    {
-        // Base case : if head is null
-        if (h == null || h.next == null) {
-            return h;
+    node mergeSort(node headNode) {
+        if (headNode == null || headNode.next == null) {
+            return headNode;
         }
 
         // get the middle of the list
-        node middle = getMiddle(h);
+        node middle = getMiddleOfLinkedList(headNode);
         node nextofmiddle = middle.next;
 
         // set the next of middle node to null
         middle.next = null;
 
         // Apply mergeSort on left list
-        node left = mergeSort(h);
+        node left = mergeSort(headNode);
 
         // Apply mergeSort on right list
         node right = mergeSort(nextofmiddle);
 
         // Merge the left and right lists
-        node sortedlist = sortedMerge(left, right);
+        node sortedlist = mergeSortedLists(left, right);
         return sortedlist;
     }
 
-    // Utility function to get the middle of the linked list
-    public static node getMiddle(node head)
-    {
+    node mergeSortedLists(node a, node b) {
+        node result = null;
+
+        if (a == null)
+            return b;
+        if (b == null)
+            return a;
+
+
+        if (a.nodeValue.toString().toLowerCase().compareTo(b.nodeValue.toString().toLowerCase()) < 0) {
+            result = a;
+            result.next = mergeSortedLists(a.next, b);
+        }
+        else {
+            result = b;
+            result.next = mergeSortedLists(a, b.next);
+        }
+        return result;
+    }
+
+    public static node getMiddleOfLinkedList(node head) {
         if (head == null)
             return head;
 
@@ -76,30 +69,26 @@ public class linkedList {
         return slow;
     }
 
-    void push(String new_data)
-    {
-        /* allocate node */
+    void addValueToLinkedList(String new_data) {
+        // allocate new node
         node new_node = new node(new_data);
 
-        /* link the old list off the new node */
+        // link the old list to the new node
         new_node.next = head;
 
-        /* move the head to point to the new node */
+        // move the head to point to the new node
         head = new_node;
     }
 
-    // Utility function to print the linked list
-    void printList(node headref, LinkedList<String> dict) throws UnsupportedEncodingException
-    {
+    void createLinkedListDictionaryText(node headReference, LinkedList<String> indexLinkedListDictionary) throws UnsupportedEncodingException {
         BufferedWriter writer;
         try {
-            writer = new BufferedWriter(new FileWriter("prueba.txt"));
-            while (headref != null) {
-                writer.write(headref.val);
+            writer = new BufferedWriter(new FileWriter("SortedDictionary.txt"));
+            while (headReference != null) {
+                writer.write(headReference.nodeValue);
                 writer.newLine();
-                // System.out.print(headref.val + " ");
-                dict.add(headref.val);
-                headref = headref.next;
+                indexLinkedListDictionary.add(headReference.nodeValue);
+                headReference = headReference.next;
 
             }
             writer.close();
@@ -109,73 +98,103 @@ public class linkedList {
 
     }
 
-    public static void scanConsole(LinkedList dict) {
+    public static void scanConsole(LinkedList indexLinkedListDictionary) {
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("To find a word position input: word  (The word you want to find),"
-                + "To find a word at an index input: index (the index you want to find) or exit to finish looking.  ");
-        for (int args = 0; args < 10; args++) { // hasta 10 args
+        System.out.println("Please input a minimum of 0 and a maximum of 10 commands args separated by a space to find a word or index");
+        String args = scan.nextLine();
+        String[] comm = args.split(" ");
+        if (comm.length > 10) {
+            System.out.println("Only up to 10 commands are allowed!");
+        }
+        else {
+
+            for (int i = 0; i < comm.length ; i++){
+                try {
+                    if (Integer.parseInt(comm[i]) == -1) {
+
+                        BufferedReader readsortedus = new BufferedReader(new FileReader("SortDictus.txt"));
+                        BufferedReader readunsortchelu = new BufferedReader(new FileReader("sortedDictTest.txt"));
+
+                        String firstl = readsortedus.readLine();
+                        String secondl = readunsortchelu.readLine();
+
+                        boolean is = true;
+                        int lineNum = 1;
 
 
-            String command = scan.nextLine();
-            String[] tokens = command.split(" ");
+                        while (firstl != null || secondl != null) {
+                            if (firstl == null || secondl == null) {
+                                is = false;
+                                break;
+                            }
+                            else if (!firstl.equalsIgnoreCase(secondl)) {
+                                is = false;
+                                break;
+                            }
 
-            if (tokens[0].equalsIgnoreCase("index")) {
-                int index = Integer.parseInt(tokens[1]);
-                if (index < 0) {
-                    System.out.println("Please input only positive numbers");
-                } else {
-                    if (index > dict.size()) {
-                        System.out.println("-1");// si no existe ese numero
+                            firstl = readsortedus.readLine();
+                            secondl = readunsortchelu.readLine();
+                            lineNum++;
+                        }
 
-                    } else {
-                        System.out.println(dict.get(index-1));
+                        if (is) {
+
+                            System.out.println("Files are exactly the same! :)");
+
+                        }
+                        else {
+                            System.out.println("The files are not the same. SortDictus has " + " ( "+ firstl + " )"  + " and sortedDictTest has " + "( " + secondl+ " )" + " in the line " + lineNum + ":(" );
+                        }
+                        readsortedus.close();
+                        readunsortchelu.close();
+                    }
+                    else {
+
+                        if ( i < -1) {
+                            System.out.println("NOT VALID NUMBER!!");
+                        }
+                        else if (i < comm.length){
+                            System.out.println("NOT VALID NUMBER!!");
+                        }
+                        else {
+                            System.out.println(indexLinkedListDictionary.get(Integer.parseInt(comm[i])));
+                        }
                     }
                 }
+                catch (Exception e) {
+                    int index = 0;
+                    while (!indexLinkedListDictionary.get(index).toString().equalsIgnoreCase(comm[i])) {
+                        index++;
+                        if (index > indexLinkedListDictionary.size()) {
+                            System.out.println("-1");// si no existe esa palabra
+                        }
 
-            } else if (tokens[0].equalsIgnoreCase("word")) {
-                int index = 0;
-                while (!dict.get(index).toString().equalsIgnoreCase(tokens[1])) {
-                    index++;
-                    if (index > dict.size()) {
-                        System.out.println("-1");// si no existe esa palabra
+
                     }
+                    System.out.println(index);
                 }
-                System.out.println(index+1);
-
-            } else if (tokens[0].equalsIgnoreCase("-1")) {
-            } else if (tokens[0].equalsIgnoreCase("exit")) {
-                break;
             }
-            scan.close();
-
         }
     }
-    public static void main(String[] args)
-    {
-        LinkedList<String> dict = new LinkedList<String>();
-        linkedList li = new linkedList();
+
+    public static void main(String[] args) {
+
+        LinkedList<String> indexLinkedListDictionary = new LinkedList<String>();
+        linkedList linkedListDictionary = new linkedList();
 
         long startTime = System.currentTimeMillis();
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader("unsortedDictTest.txt"));//0 milisecond
-            String line = reader.readLine(); //1 milisecond
-            int counter = 0;
-            while (line != null) {
-                li.push(line);
-                /*if (dict.size() == 0) {
-                    dict.add(line);
 
-                } else {
-                    if (!sortList(line, dict)) {
-                        dict.add(line);
-                    }
-//                     System.out.println(dict.indexOf(line));
-                }*/
+        //Read the file with the words
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("unsortedDictTest.txt"));
+            String line = reader.readLine();
+            while (line != null) {
+                linkedListDictionary.addValueToLinkedList(line);
                 line = reader.readLine();
             }
             reader.close();
-//            System.out.println("END!!!");
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -184,18 +203,18 @@ public class linkedList {
 
 
         // Apply merge Sort
-        li.head = li.mergeSort(li.head);
-        //System.out.print("\n Sorted Linked List is: \n");
+        linkedListDictionary.head = linkedListDictionary.mergeSort(linkedListDictionary.head);
         try {
-            li.printList(li.head, dict);
+            linkedListDictionary.createLinkedListDictionaryText(linkedListDictionary.head, indexLinkedListDictionary);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-        endTime = (System.currentTimeMillis() - startTime);
-        System.out.println("New file written in: " + endTime + " ms"); //yaaa
 
-        scanConsole(dict);
         endTime = (System.currentTimeMillis() - startTime);
-        System.out.println("Console scanned in: " + endTime + " ms"); //yaaa
+        System.out.println("New file written in: " + endTime + " ms");
+
+        scanConsole(indexLinkedListDictionary);
+        endTime = (System.currentTimeMillis() - startTime);
+        System.out.println("Console scanned in: " + endTime + " ms");
     }
 }
