@@ -81,98 +81,94 @@ public class linkedList {
     }
 
     void createLinkedListDictionaryText(node headReference, LinkedList<String> indexLinkedListDictionary) throws UnsupportedEncodingException {
-        BufferedWriter writer;
+        BufferedWriter writer_InNewFile;
         try {
-            writer = new BufferedWriter(new FileWriter("SortedDictionary.txt"));
+            writer_InNewFile = new BufferedWriter(new FileWriter("SortedDictMergeSort.txt"));
             while (headReference != null) {
-                writer.write(headReference.nodeValue);
-                writer.newLine();
+                writer_InNewFile.write(headReference.nodeValue);
+                writer_InNewFile.newLine();
                 indexLinkedListDictionary.add(headReference.nodeValue);
                 headReference = headReference.next;
 
             }
-            writer.close();
+            writer_InNewFile.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
 
-    public static void scanConsole(LinkedList indexLinkedListDictionary) {
+    public static void argumentsInput(LinkedList indexLinkedListDictionary) {
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Please input a minimum of 0 and a maximum of 10 commands args separated by a space to find a word or index");
-        String args = scan.nextLine();
-        String[] comm = args.split(" ");
-        if (comm.length > 10) {
+        String argumentsInputed = scan.nextLine();
+        String[] arrayOfArgumentsInputed = argumentsInputed.split(" ");
+        if (arrayOfArgumentsInputed.length > 10) {
             System.out.println("Only up to 10 commands are allowed!");
         }
         else {
 
-            for (int i = 0; i < comm.length ; i++){
+            for (int userArgument = 0; userArgument < arrayOfArgumentsInputed.length ; userArgument++){
                 try {
-                    if (Integer.parseInt(comm[i]) == -1) {
+                    if (Integer.parseInt(arrayOfArgumentsInputed[userArgument]) == -1) {
 
-                        BufferedReader readsortedus = new BufferedReader(new FileReader("SortDictus.txt"));
-                        BufferedReader readunsortchelu = new BufferedReader(new FileReader("sortedDictTest.txt"));
+                        BufferedReader readSortedDictMadeByMergeSort = new BufferedReader(new FileReader("SortedDictMergeSort.txt"));
+                        BufferedReader readSortedDictGivenToTest = new BufferedReader(new FileReader("sortedDictTest.txt"));
 
-                        String firstl = readsortedus.readLine();
-                        String secondl = readunsortchelu.readLine();
+                        String lineSortedDictMergeSort = readSortedDictMadeByMergeSort.readLine();
+                        String lineinSortDictTest = readSortedDictGivenToTest.readLine();
 
-                        boolean is = true;
-                        int lineNum = 1;
+                        boolean linesAreTheSame = true;
+                        int PositionOfLine = 1;
 
 
-                        while (firstl != null || secondl != null) {
-                            if (firstl == null || secondl == null) {
-                                is = false;
+                        while (lineSortedDictMergeSort != null || lineinSortDictTest != null) {
+                            if (lineSortedDictMergeSort == null || lineinSortDictTest == null) {
+                                linesAreTheSame = false;
                                 break;
                             }
-                            else if (!firstl.equalsIgnoreCase(secondl)) {
-                                is = false;
+                            else if (!lineSortedDictMergeSort.equalsIgnoreCase(lineinSortDictTest)) {
+                                linesAreTheSame = false;
                                 break;
                             }
 
-                            firstl = readsortedus.readLine();
-                            secondl = readunsortchelu.readLine();
-                            lineNum++;
+                            lineSortedDictMergeSort = readSortedDictMadeByMergeSort.readLine();
+                            lineinSortDictTest = readSortedDictGivenToTest.readLine();
+                            PositionOfLine++;
                         }
 
-                        if (is) {
-
+                        if (linesAreTheSame) {
                             System.out.println("Files are exactly the same! :)");
-
                         }
                         else {
-                            System.out.println("The files are not the same. SortDictus has " + " ( "+ firstl + " )"  + " and sortedDictTest has " + "( " + secondl+ " )" + " in the line " + lineNum + ":(" );
+                            System.out.println("The files are not the same. SortDictus has " + " ( "+ lineSortedDictMergeSort + " )"  + " and sortedDictTest has " + "( " + lineinSortDictTest+ " )" + " in the line " + PositionOfLine + ":(" );
                         }
-                        readsortedus.close();
-                        readunsortchelu.close();
+                        readSortedDictMadeByMergeSort.close();
+                        readSortedDictGivenToTest.close();
                     }
                     else {
 
-                        if ( i < -1) {
-                            System.out.println("NOT VALID NUMBER!!");
+                        if ( Integer.parseInt(arrayOfArgumentsInputed[userArgument]) < -1) {
+                            System.out.println("-1");
                         }
-                        else if (i < comm.length){
-                            System.out.println("NOT VALID NUMBER!!");
+                        else if (userArgument < arrayOfArgumentsInputed.length){
+                            System.out.println("-1");
                         }
                         else {
-                            System.out.println(indexLinkedListDictionary.get(Integer.parseInt(comm[i])));
+                            System.out.println(indexLinkedListDictionary.get(Integer.parseInt(arrayOfArgumentsInputed[userArgument])));
                         }
                     }
                 }
                 catch (Exception e) {
-                    int index = 0;
-                    while (!indexLinkedListDictionary.get(index).toString().equalsIgnoreCase(comm[i])) {
-                        index++;
-                        if (index > indexLinkedListDictionary.size()) {
-                            System.out.println("-1");// si no existe esa palabra
+                    int indexinLinkedListDict = 0;
+                    while (!indexLinkedListDictionary.get(indexinLinkedListDict).toString().equalsIgnoreCase(arrayOfArgumentsInputed[userArgument])) {
+                        indexinLinkedListDict++;
+                        if (indexinLinkedListDict > indexLinkedListDictionary.size()) {
+                            System.out.println("-1");
                         }
-
-
                     }
-                    System.out.println(index);
+                    System.out.println(indexinLinkedListDict + 1);
                 }
             }
         }
@@ -213,7 +209,7 @@ public class linkedList {
         endTime = (System.currentTimeMillis() - startTime);
         System.out.println("New file written in: " + endTime + " ms");
 
-        scanConsole(indexLinkedListDictionary);
+        argumentsInput(indexLinkedListDictionary);
         endTime = (System.currentTimeMillis() - startTime);
         System.out.println("Console scanned in: " + endTime + " ms");
     }
