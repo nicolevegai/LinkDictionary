@@ -162,19 +162,20 @@ public class linkedList {
                         readsortedus.close();
                         readunsortchelu.close();
                     }
-                    else {
 
-                        if ( i < -1) {
-                            System.out.println("NOT VALID NUMBER!!");
+                    else if ( Integer.parseInt(comm[i]) < -1) {
+                            System.out.println("-1");
                         }
-                        else if (i < comm.length){
-                            System.out.println("NOT VALID NUMBER!!");
+                        else if (Integer.parseInt(comm[i]) > dict.size()){
+                            System.out.println("-1");
                         }
-                        else {
+                        else  {
                             System.out.println(dict.get(Integer.parseInt(comm[i])));
                         }
+
                     }
-                }
+
+
                 catch (Exception e) {
                     int index = 0;
                     while (!dict.get(index).toString().equalsIgnoreCase(comm[i])) {
