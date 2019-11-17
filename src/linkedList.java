@@ -147,18 +147,16 @@ public class linkedList {
                         readSortedDictMadeByMergeSort.close();
                         readSortedDictGivenToTest.close();
                     }
-                    else {
-
-                        if ( Integer.parseInt(arrayOfArgumentsInputed[userArgument]) < -1) {
+                    else if ( Integer.parseInt(arrayOfArgumentsInputed[userArgument]) < -1) {
+                        System.out.println("-1");
+                        }
+                        else if (Integer.parseInt(arrayOfArgumentsInputed[userArgument]) > 10000){
                             System.out.println("-1");
                         }
-                        else if (userArgument < arrayOfArgumentsInputed.length){
-                            System.out.println("-1");
-                        }
-                        else {
+                        else  {
                             System.out.println(indexLinkedListDictionary.get(Integer.parseInt(arrayOfArgumentsInputed[userArgument])));
                         }
-                    }
+
                 }
                 catch (Exception e) {
                     int indexinLinkedListDict = 0;
