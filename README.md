@@ -22,6 +22,7 @@ For example:
 Was previously: 
     
     LinkedList<String> dict = new LinkedList<String>();
+    
 
 Also, we applied this coding principle when creating an array that holds all the arguments that were inputed by the user. We used to call it comm and it was not clear so we refactor it and now the array holding this arguments is called arrayOfArgumentsInputed which is more understandable.  
 
@@ -36,6 +37,17 @@ Was previously:
         String[] comm = args.split(" ");
         if (comm.length > 10) {
             System.out.println("Only up to 10 commands are allowed!");
+            
+**Some others variables renamed in the argumentsInputed are:**
+
+* BufferedReader readsortedus **->** readSortedDictMadeByMergeSort
+* BufferedReader readunsortchelu **->**  readSortedDictGivenToTest
+* String firstl **->** lineSortedDictMergeSort
+* String secondl **->** lineinSortDictTest
+* int lineNum **->** PositionOfLine
+* boolean is **->** linesAreTheSame
+* int index **->**  indexinLinkedListDict
+  
 
 #### Coding Principle 2: Keep functions small
 The functions that we have are all usually quite small, and to the point. A good example of this would be the method that we use to find the middle of the list.
