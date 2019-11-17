@@ -23,7 +23,7 @@ Was previously:
     
     LinkedList<String> dict = new LinkedList<String>();
 
-Also, we applied this coding principle when creating an array that holds all the arguments that were inputed by the user. We used to call it comm and it was not clear so we refactor it and now the array holding this argumenst is called arrayOfArgumentsInputed which is more clear. 
+Also, we applied this coding principle when creating an array that holds all the arguments that were inputed by the user. We used to call it comm and it was not clear so we refactor it and now the array holding this arguments is called arrayOfArgumentsInputed which is more understandable.  
 
      String argumentsInputed = scan.nextLine();
             String[] arrayOfArgumentsInputed = argumentsInputed.split(" ");
